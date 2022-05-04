@@ -1,44 +1,48 @@
 export interface Experience {
-    order: number,
-    position: string,
     year: number,
-    comment?: string
+    comments: string[]
 }
 
 export const EXPERIENCES_DATA: Experience[] = [
     {
-        order: 1,
-        position: 'Web3 Technologist',
-        year: 2022
+        year: 2022,
+        comments: [
+            'Currently working with web3 companies in the space',
+            'Participated in my first blockchain conferences (won a hackathon)',
+            'Worked remotely on a team of 4 for the 2nd consecutive year',
+        ]
     },
     {
-        order: 2,
-        position: 'Data Engineer',
-        year: 2019
+        year: 2021,
+        comments: [
+            'Visited the Amazon Rainforest for the first time',
+            'Learned about blockchain technology and decided to move towards it',
+        ],
     },
     {
-        order: 3,
-        position: 'Software Engineer',
-        year: 2019
+        year: 2019,
+        comments: [
+            'Became a cloud data engineer at Schuberg Philis',
+            'Got a job offer to work and live in The Netherlands',
+        ],
     },
     {
-        order: 4,
-        position: 'Fullstack Engineer',
-        year: 2018
+        year: 2018,
+        comments: [
+            'Learned a bunch of tech, like python aws, docker, terraform'
+        ],
     },
     {
-        order: 5,
-        position: 'Frontend Engineer',
-        year: 2017
+        year: 2017,
+        comments: [
+            'After some freelance work, I got my first job as a web developer',
+        ],
     },
     {
-        order: 6,
-        position: 'Psychotherapist',
-        year: 2017
-    },
-    {
-        order: 7,
-        position: 'School Psychologist',
+        comments: [
+            'Started coding spreadsheets, JS and automation tools for a hobby',
+            'Graduated in Clinical Psychology, working for ~5 years in the field',
+        ],
         year: 2012
     }
 ]
