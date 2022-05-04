@@ -14,7 +14,7 @@ interface MainProps {
 }
 
 const Main = ({ children, router }: PropsWithChildren<MainProps>) => {
-    const { personal: { name, bio }, social: { twitter } } = useContext<ProfileProps>(ProfileContext)
+    const { personal: { name, subtitle: bio }, social: { twitter } } = useContext<ProfileProps>(ProfileContext)
 
     return (
         <Box as="main" pb={8}>
@@ -38,7 +38,6 @@ const Main = ({ children, router }: PropsWithChildren<MainProps>) => {
             </Head>
 
             <NavBar path={router.asPath} />
-
             <Container maxW="container.md" pt={14}>
                 {children}
                 <Footer />

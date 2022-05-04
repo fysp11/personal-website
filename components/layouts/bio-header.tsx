@@ -13,7 +13,7 @@ export function BioHeader({ personal }: { personal: PersonalProps }) {
             <Heading as="h2" variant="page-title">
                 {personal.name}
             </Heading>
-            <p>{personal.bio}</p>
+            <p>{personal.subtitle}</p>
         </Box>
         <Box
             flexShrink={0}

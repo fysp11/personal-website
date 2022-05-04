@@ -15,37 +15,36 @@ import {
     useColorModeValue
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
-import { IoLogoGithub } from 'react-icons/io5'
-import { PropsWithChildren, useContext } from 'react'
+import { useContext } from 'react'
 
 import ThemeToggleButton from './theme-toggle-button'
 import { ProfileProps } from '../constants/profile'
 import { ProfileContext } from '../providers/profile'
 
-type LinkItemProps = any & {
-    href: string,
-    path: string,
-    target?: string,
-    display: string
-}
+// type LinkItemProps = any & {
+//     href: string,
+//     path: string,
+//     target?: string,
+//     display: string
+// }
 
-const LinkItem = ({ href, path, target, children, ...props }: PropsWithChildren<LinkItemProps>) => {
-    const active = path === href
-    const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
-    return (
-        <NextLink href={href} passHref scroll={false}>
-            <Link
-                p={2}
-                bg={active ? 'grassTeal' : undefined}
-                color={active ? '#202023' : inactiveColor}
-                target={target}
-                {...props}
-            >
-                {children}
-            </Link>
-        </NextLink>
-    )
-}
+// const LinkItem = ({ href, path, target, children, ...props }: PropsWithChildren<LinkItemProps>) => {
+//     const active = path === href
+//     const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
+//     return (
+//         <NextLink href={href} passHref scroll={false}>
+//             <Link
+//                 p={2}
+//                 bg={active ? 'grassTeal' : undefined}
+//                 color={active ? '#202023' : inactiveColor}
+//                 target={target}
+//                 {...props}
+//             >
+//                 {children}
+//             </Link>
+//         </NextLink>
+//     )
+// }
 
 interface NavbarProps {
     path: string,
@@ -53,7 +52,7 @@ interface NavbarProps {
 }
 
 const Navbar = (props: NavbarProps) => {
-    const { path } = props
+    // const { path } = props
 
     const { personal: { avatar, name } } = useContext<ProfileProps>(ProfileContext)
 
@@ -71,15 +70,11 @@ const Navbar = (props: NavbarProps) => {
                 display="flex"
                 p={2}
                 maxW="container.md"
-                justifyItems={'space-between'}
+                justifyContent={'space-between'}
                 alignItems={'center'}
-                // flexDirection={'row'}
                 flexWrap={'wrap'}
-            // wrap="wrap"
-            // align="center"
-            // justify="space-between"
             >
-                <Flex align="center" mr={5}>
+                <Flex align="center" mr={5} flexGrow="revert">
                     <Heading as="h1" size="lg" letterSpacing={'tighter'}>
                         <Logo logo={avatar} text={name} />
                     </Heading>
@@ -93,27 +88,10 @@ const Navbar = (props: NavbarProps) => {
                     flexGrow={1}
                     mt={{ base: 4, md: 0 }}
                 >
-                    <LinkItem href="/works" path={path}>
-                        Works
-                    </LinkItem>
-                    <LinkItem href="/posts" path={path}>
-                        Posts
-                    </LinkItem>
-                    <LinkItem
-                        target="_blank"
-                        href="https://github.com/craftzdog/craftzdog-homepage"
-                        path={path}
-                        display="inline-flex"
-                        // align="center"
-                        style={{ gap: 4 }}
-                        pl={2}
-                    >
-                        <IoLogoGithub />
-                        Source
-                    </LinkItem>
+
                 </Stack>
 
-                <Box flex={1} alignContent="right">
+                <Box flex={1} flexGrow={0} display="flex" alignContent="right">
                     <ThemeToggleButton />
 
                     <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
@@ -131,15 +109,6 @@ const Navbar = (props: NavbarProps) => {
                                 <NextLink href="/works" passHref>
                                     <MenuItem as={Link}>Works</MenuItem>
                                 </NextLink>
-                                <NextLink href="/posts" passHref>
-                                    <MenuItem as={Link}>Posts</MenuItem>
-                                </NextLink>
-                                <MenuItem
-                                    as={Link}
-                                    href="https://github.com/craftzdog/craftzdog-homepage"
-                                >
-                                    View Source
-                                </MenuItem>
                             </MenuList>
                         </Menu>
                     </Box>

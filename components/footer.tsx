@@ -2,8 +2,8 @@ import { Box } from '@chakra-ui/react'
 
 const Footer = () => {
     return (
-        <Box alignContent="center" opacity={0.4} fontSize="sm">
-            Welcome to my website.
+        <Box textAlign="center" opacity={0.8} fontSize="sm">
+            thanks <a className='hover-underline-animation' href="https://www.craftz.dog/">Takuya 💚</a> for the template.
         </Box>
     )
 }

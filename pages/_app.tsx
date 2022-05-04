@@ -6,6 +6,8 @@ import { AppProps } from 'next/app'
 import { ProfileContext } from '../providers/profile'
 import { ME_PROFILE } from '../constants/profile'
 
+import '../styles/globals.css'
+
 if (typeof window !== 'undefined') {
   window.history.scrollRestoration = 'manual'
 }
