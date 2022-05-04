@@ -12,7 +12,7 @@ if (typeof window !== 'undefined') {
 
 function Website({ Component, pageProps, router }: AppProps) {
   return (
-    <Chakra cookies={pageProps.cookies}>
+    <Chakra>
       <Fonts />
       <Layout router={router}>
         <AnimatePresence

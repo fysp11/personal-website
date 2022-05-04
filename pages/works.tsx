@@ -4,7 +4,7 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 
-import { WorkItemData, WORKS_DATA } from '../constants/works'
+import { WORKS_DATA } from '../constants/works'
 
 
 const Works = () => {
@@ -33,4 +33,3 @@ const Works = () => {
 }
 
 export default Works
-export { getServerSideProps } from '../components/chakra'
