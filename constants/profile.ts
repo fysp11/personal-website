@@ -1,3 +1,5 @@
+import { AVATAR_PNG } from "./assets";
+
 export interface PersonalProps {
     name: string;
     bio: string;
@@ -27,7 +29,7 @@ export const ME_PROFILE: ProfileProps = {
     personal: {
         name: 'Felipe Mendonça',
         bio: 'climate/social focused, tech enthusiast',
-        avatar: '/img/avatar.png',
+        avatar: AVATAR_PNG,
     },
     social: {
         twitter: 'fysp',

@@ -1,5 +1,5 @@
 import NextLink from 'next/link'
-import Image, { StaticImageData } from 'next/image'
+import Image from './image'
 import { Box, Text, LinkBox, LinkOverlay } from '@chakra-ui/react'
 import { Global } from '@emotion/react'
 import { PropsWithChildren } from 'react'
@@ -7,7 +7,7 @@ import { PropsWithChildren } from 'react'
 
 interface BaseGridItemProps {
     title: string,
-    thumbnail: StaticImageData
+    thumbnail: string
 }
 
 interface GridItemProps extends BaseGridItemProps {
