@@ -11,7 +11,7 @@ interface ExperiencesProps {
 const Experiences = ({ experiences }: ExperiencesProps) => {
     return <>
         <Heading as="h3" variant="section-title">
-            Experiences
+            {"Stuff I've done"}
         </Heading>
         {experiences
             .sort((a, b) => b.year - a.year)
