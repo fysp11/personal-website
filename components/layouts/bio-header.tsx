@@ -32,7 +32,7 @@ export function BioHeader({ personal }: { personal: PersonalProps }) {
                 overflow="hidden"
             >
                 <ProfileImage
-                    src={personal.avatar}
+                    src={personal.irlAvatar}
                     alt="Profile image"
                     borderRadius="full"
                     width="100%"
