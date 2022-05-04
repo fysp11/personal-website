@@ -15,7 +15,7 @@ import {
     useColorModeValue
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
 
 import ThemeToggleButton from './theme-toggle-button'
 import { ProfileProps } from '../constants/profile'
@@ -53,8 +53,21 @@ interface NavbarProps {
 
 const Navbar = (props: NavbarProps) => {
     // const { path } = props
-
     const { personal: { avatar, name } } = useContext<ProfileProps>(ProfileContext)
+    const [pageYOffset, setPageYOffset] = useState(0)
+
+    const handleScroll = () => {
+        const position = window.pageYOffset;
+        setPageYOffset(position);
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
         <Box
@@ -75,7 +88,7 @@ const Navbar = (props: NavbarProps) => {
                 flexWrap={'wrap'}
             >
                 <Flex align="center" mr={5} flexGrow="revert">
-                    <Heading as="h1" size="lg" letterSpacing={'tighter'}>
+                    <Heading as="h1" size="lg" letterSpacing={'tighter'} display={pageYOffset > 10 ? 'flex' : 'none'}>
                         <Logo logo={avatar} text={name} />
                     </Heading>
                 </Flex>
@@ -94,7 +107,7 @@ const Navbar = (props: NavbarProps) => {
                 <Box flex={1} flexGrow={0} display="flex" alignContent="right">
                     <ThemeToggleButton />
 
-                    <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
+                    <Box ml={2} display={{ base: 'inline-block', md: 'none' }} >
                         <Menu isLazy id="navbar-menu">
                             <MenuButton
                                 as={IconButton}
