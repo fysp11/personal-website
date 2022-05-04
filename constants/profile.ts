@@ -27,7 +27,7 @@ export const ME_PROFILE: ProfileProps = {
         irlAvatar: IRL_AVATAR_JPEG,
         bio: [
             `I'm currently a software developer with a background in clinical psychology moving towards
-            regenerative (climate and public goods). On my free time, I like to play hike, play basketball,
+            regenerative ventures (climate and public goods). In my free time, I like to hike, play basketball,
             listen to music, travel and be with friends.`
         ]
     },
