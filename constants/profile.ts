@@ -34,6 +34,6 @@ export const ME_PROFILE: ProfileProps = {
     social: {
         twitter: ['https://twitter.com/fysp', IoLogoTwitter],
         github: ['https://github.com/fysp11', IoLogoGithub],
-        website: ['https://fysp.eth', IoLogoHtml5]
+        website: ['https://fysp.eth.limo', IoLogoHtml5]
     },
 }
