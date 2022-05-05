@@ -10,6 +10,7 @@ const Image = (props: ImageProps) => {
             {...props}
             loader={customLoader}
             unoptimized={true}
+            priority={false}
         />
     );
 }
