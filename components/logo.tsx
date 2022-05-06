@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { Text, useColorModeValue } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 import Image from './image'
+import { StaticImageData } from 'next/image'
 
 const LogoBox = styled.span`
     font-weight: bold;
@@ -21,7 +22,7 @@ const LogoBox = styled.span`
 
 interface LogoProps {
     text: string
-    logo: string
+    logo: string | StaticImageData
 }
 
 
