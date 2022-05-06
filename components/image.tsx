@@ -9,7 +9,6 @@ const Image = (props: ImageProps) => {
         <NextImage
             {...props}
             loader={customLoader}
-            unoptimized={true}
             priority={false}
         />
     );
