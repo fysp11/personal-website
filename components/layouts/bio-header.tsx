@@ -8,6 +8,7 @@ const ProfileImage = chakra(Image, {
 })
 
 export function BioHeader({ personal }: { personal: PersonalProps }) {
+    const squareSize = '96px'
     return <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
             <Heading as="h2" variant="page-title">
@@ -32,11 +33,14 @@ export function BioHeader({ personal }: { personal: PersonalProps }) {
                 overflow="hidden"
             >
                 <ProfileImage
-                    srcSet={personal.irlAvatar}
+                    src={personal.irlAvatar}
                     alt="Profile image"
                     borderRadius="full"
-                    width={96}
-                    height={96} />
+                    width={squareSize}
+                    maxWidth={squareSize}
+                    height={squareSize}
+                    maxHeight={squareSize}
+                />
             </Box>
         </Box>
     </Box>
