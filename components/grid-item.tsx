@@ -22,6 +22,8 @@ export const GridItem = ({ children, href, title, thumbnail }: PropsWithChildren
                 alt={title}
                 className="grid-item-thumbnail"
                 placeholder="blur"
+                width={96}
+                height={96}
                 loading="lazy"
             />
             <LinkOverlay href={href} target="_blank">
