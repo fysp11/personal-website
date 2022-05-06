@@ -4,7 +4,7 @@ const nextConfig = {
   swcMinify: true,
   optimizeImages: false,
   images: {
-    loader: 'custom'
+    formats: ['image/avif', 'image/webp'],
   },
   exportPathMap: async function (
     _defaultPathMap,
