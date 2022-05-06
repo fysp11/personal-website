@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { Text, useColorModeValue } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 import Image from './image'
-import { StaticImageData } from 'next/image'
 
 const LogoBox = styled.span`
     font-weight: bold;
@@ -22,19 +21,20 @@ const LogoBox = styled.span`
 
 interface LogoProps {
     text: string
-    logo: string | StaticImageData
+    logo: string
 }
 
 
 const Logo = ({ text, logo }: LogoProps) => {
     // const footPrintImg = `/images/footprint${useColorModeValue('', '-dark')}.png`
+    const squareSize = 20
 
     return (
         <Link href="/" scroll={false}>
             <a>
                 <LogoBox>
 
-                    <Image src={logo} width={20} height={20} alt="logo" />
+                    <Image srcSet={logo} width={squareSize} height={squareSize} maxWidth={squareSize} maxHeight={squareSize} alt="logo" />
                     <Text
                         color={useColorModeValue('gray.800', 'whiteAlpha.900')}
                         fontFamily='M PLUS Rounded 1c", sans-serif'
