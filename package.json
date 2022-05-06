@@ -13,23 +13,16 @@
     "@chakra-ui/react": "^1.8.8",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
-    "imagemin-mozjpeg": "^10.0.0",
-    "imagemin-optipng": "^8.0.0",
     "next": "12.1.6",
-    "next-compose-plugins": "^2.2.1",
-    "next-images": "^1.8.4",
-    "next-optimized-images": "^2.6.2",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "react-icons": "^4.3.1",
-    "sharp": "^0.30.4",
-    "three": "^0.140.0"
+    "react-icons": "^4.3.1"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^12.1.6",
     "@types/node": "17.0.31",
     "@types/react": "18.0.8",
     "@types/react-dom": "18.0.3",
-    "@types/three": "^0.140.0",
     "eslint": "8.14.0",
     "eslint-config-next": "12.1.6",
     "typescript": "4.6.4"

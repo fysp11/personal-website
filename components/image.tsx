@@ -1,7 +1,8 @@
-import { Image as ChakraImage } from '@chakra-ui/react'
+import { Image as ChakraImage, ImageProps } from '@chakra-ui/react'
 
-const Image = (props: any) => {
-    return <ChakraImage {...props} />;
+
+const Image = (props: ImageProps) => {
+    return <ChakraImage {...props} loading="lazy" />;
 }
 
 

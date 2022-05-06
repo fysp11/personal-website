@@ -1,21 +1,30 @@
-const withImages = require('next-images')
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
 
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   assetPrefix: 'https://fysp.on.fleek.co',
   dynamicAssetPrefix: true,
-  images: {
-    disableStaticImages: true
-  }
 }
 
-
-module.exports = withImages({
+module.exports = withBundleAnalyzer({
   ...nextConfig,
-  webpack(config, _options) {
-    return config
+  webpack(config, { isServer }) {
+    if (!isServer) {
+      config.optimization.splitChunks.cacheGroups = {
+        ...config.optimization.splitChunks.cacheGroups,
+        '@chakra-ui': {
+          test: /[\\/]node_modules[\\/](@chakra-ui)[\\/]/,
+          name: '@chakra-ui',
+          priority: 10,
+          reuseExistingChunk: false,
+        },
+      };
+    }
+
+    return config;
   }
 })

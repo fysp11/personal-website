@@ -3,13 +3,12 @@ import { IoLogoGithub, IoLogoTwitter, IoLogoHtml5 } from 'react-icons/io5'
 import { FaCalendarPlus } from 'react-icons/fa'
 
 import { AVATAR_PNG, IRL_AVATAR_JPEG } from "./assets";
-import { StaticImageData } from 'next/image';
 
 export interface PersonalProps {
     name: string;
     subtitle: string;
-    avatar: string | StaticImageData;
-    irlAvatar: string | StaticImageData;
+    avatar: string;
+    irlAvatar: string;
     bio: string[];
 }
 

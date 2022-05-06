@@ -1,9 +1,11 @@
-import Layout from '../components/layouts/main'
-import Fonts from '../components/fonts'
-import { AnimatePresence } from 'framer-motion'
-import Chakra from '../components/chakra'
 import { AppProps } from 'next/app'
+import { AnimatePresence } from 'framer-motion'
+
+import Chakra from '../components/chakra'
+import Fonts from '../components/fonts'
+import Layout from '../components/layouts/main'
 import { ProfileContext } from '../providers/profile'
+
 import { ME_PROFILE } from '../constants/profile'
 
 import '../styles/globals.css'
