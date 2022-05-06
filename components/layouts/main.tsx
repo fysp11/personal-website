@@ -34,6 +34,8 @@ const Main = ({ children, router }: PropsWithChildren<MainProps>) => {
                 <meta name="og:title" content={name} />
                 <meta property="og:type" content="website" />
                 <meta property="og:image" content={avatar} />
+                <meta property="og:image:width" content="192" />
+                <meta property="og:image:height" content="192" />
                 <title>{name} - Homepage</title>
             </Head>
 
