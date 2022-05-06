@@ -6,6 +6,7 @@ const Image = (props: ImageProps) => {
         <NextImage
             {...props}
             priority={false}
+            loading="lazy"
         />
     );
 }
