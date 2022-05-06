@@ -14,7 +14,7 @@ interface MainProps {
 }
 
 const Main = ({ children, router }: PropsWithChildren<MainProps>) => {
-    const { personal: { name, subtitle: bio }, social: { twitter } } = useContext<ProfileProps>(ProfileContext)
+    const { personal: { name, avatar, subtitle: bio }, social: { twitter } } = useContext<ProfileProps>(ProfileContext)
 
     return (
         <Box as="main" pb={8}>
@@ -28,12 +28,14 @@ const Main = ({ children, router }: PropsWithChildren<MainProps>) => {
                 {/* <meta name="twitter:site" content={`@${twitter}`} /> */}
                 <meta name="twitter:creator" content={`@${twitter}`} />
                 <meta name="twitter:title" content={name} />
-                {/* <meta name="twitter:image" content="" /> */}
+                <meta name="twitter:image" content={avatar} />
                 <meta property="og:site_name" content={name} />
                 <meta property="og:description" content={bio} />
                 <meta name="og:title" content={name} />
                 <meta property="og:type" content="website" />
-                {/* <meta property="og:image" content="" /> */}
+                <meta property="og:image" content={avatar} />
+                <meta property="og:image:width" content="192" />
+                <meta property="og:image:height" content="192" />
                 <title>{name} - Homepage</title>
             </Head>
 

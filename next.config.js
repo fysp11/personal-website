@@ -8,6 +8,7 @@ const ContentSecurityPolicy = `
   style-src-elem 'self' https://fonts.googleapis.com/ 'unsafe-inline';
   script-src 'self' 'unsafe-inline' 'unsafe-eval';
   font-src 'self' https://fonts.gstatic.com/ 'unsafe-inline';
+  object-src 'none';
 `
 
 const securityHeaders = [

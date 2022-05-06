@@ -16,24 +16,26 @@ if (typeof window !== 'undefined') {
 
 function Website({ Component, pageProps, router }: AppProps) {
   return (
-    <Chakra>
+    <>
       <Fonts />
-      <Layout router={router}>
-        <AnimatePresence
-          exitBeforeEnter
-          initial={true}
-          onExitComplete={() => {
-            if (typeof window !== 'undefined') {
-              window.scrollTo({ top: 0 })
-            }
-          }}
-        >
-          <ProfileContext.Provider value={ME_PROFILE}>
-            <Component {...pageProps} key={router.route} />
-          </ProfileContext.Provider>
-        </AnimatePresence>
-      </Layout>
-    </Chakra>
+      <Chakra>
+        <ProfileContext.Provider value={ME_PROFILE}>
+          <Layout router={router}>
+            <AnimatePresence
+              exitBeforeEnter
+              initial={true}
+              onExitComplete={() => {
+                if (typeof window !== 'undefined') {
+                  window.scrollTo({ top: 0 })
+                }
+              }}
+            >
+              <Component {...pageProps} key={router.route} />
+            </AnimatePresence>
+          </Layout>
+        </ProfileContext.Provider>
+      </Chakra>
+    </>
   )
 }
 
