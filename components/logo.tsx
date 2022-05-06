@@ -27,14 +27,21 @@ interface LogoProps {
 
 const Logo = ({ text, logo }: LogoProps) => {
     // const footPrintImg = `/images/footprint${useColorModeValue('', '-dark')}.png`
-    const squareSize = 20
+    const squareSize = '20px'
 
     return (
         <Link href="/" scroll={false}>
             <a>
                 <LogoBox>
 
-                    <Image srcSet={logo} width={squareSize} height={squareSize} maxWidth={squareSize} maxHeight={squareSize} alt="logo" />
+                    <Image
+                        src={logo}
+                        width={squareSize}
+                        height={squareSize}
+                        maxWidth={squareSize}
+                        maxHeight={squareSize}
+                        alt="logo"
+                    />
                     <Text
                         color={useColorModeValue('gray.800', 'whiteAlpha.900')}
                         fontFamily='M PLUS Rounded 1c", sans-serif'

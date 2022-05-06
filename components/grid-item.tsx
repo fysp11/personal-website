@@ -4,7 +4,6 @@ import { Box, Text, LinkBox, LinkOverlay } from '@chakra-ui/react'
 import { Global } from '@emotion/react'
 import { PropsWithChildren } from 'react'
 
-
 interface BaseGridItemProps {
     title: string,
     thumbnail: string
@@ -14,25 +13,30 @@ interface GridItemProps extends BaseGridItemProps {
     href: string
 }
 
-export const GridItem = ({ children, href, title, thumbnail }: PropsWithChildren<GridItemProps>) => (
-    <Box w="100%" textAlign="center">
-        <LinkBox cursor="pointer">
-            <Image
-                src={thumbnail}
-                alt={title}
-                className="grid-item-thumbnail"
-                placeholder="blur"
-                width={96}
-                height={96}
-                loading="lazy"
-            />
-            <LinkOverlay href={href} target="_blank">
-                <Text mt={2}>{title}</Text>
-            </LinkOverlay>
-            <Text fontSize={14}>{children}</Text>
-        </LinkBox>
-    </Box>
-)
+export const GridItem = ({ children, href, title, thumbnail }: PropsWithChildren<GridItemProps>) => {
+    const squareSize = 96
+    return (
+        <Box w="100%" textAlign="center">
+            <LinkBox cursor="pointer">
+                <Image
+                    src={thumbnail}
+                    alt={title}
+                    className="grid-item-thumbnail"
+                    placeholder="blur"
+                    width={squareSize}
+                    maxWidth={squareSize}
+                    height={squareSize}
+                    maxHeight={squareSize}
+                    loading="lazy"
+                />
+                <LinkOverlay href={href} target="_blank">
+                    <Text mt={2}>{title}</Text>
+                </LinkOverlay>
+                <Text fontSize={14}>{children}</Text>
+            </LinkBox>
+        </Box>
+    )
+}
 
 interface WorkGridItemProps extends BaseGridItemProps {
     id: string
