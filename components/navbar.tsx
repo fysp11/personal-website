@@ -106,25 +106,6 @@ const Navbar = (props: NavbarProps) => {
 
                 <Box flex={1} flexGrow={0} display="flex" alignContent="right">
                     <ThemeToggleButton />
-
-                    <Box ml={2} display={{ base: 'inline-block', md: 'none' }} >
-                        <Menu isLazy id="navbar-menu">
-                            <MenuButton
-                                as={IconButton}
-                                icon={<HamburgerIcon />}
-                                variant="outline"
-                                aria-label="Options"
-                            />
-                            <MenuList>
-                                <NextLink href="/" passHref>
-                                    <MenuItem as={Link}>About</MenuItem>
-                                </NextLink>
-                                <NextLink href="/works" passHref>
-                                    <MenuItem as={Link}>Works</MenuItem>
-                                </NextLink>
-                            </MenuList>
-                        </Menu>
-                    </Box>
                 </Box>
             </Container>
         </Box>
