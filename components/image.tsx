@@ -1,14 +1,7 @@
-import NextImage, { ImageProps } from "next/image";
+import { Image as ChakraImage } from '@chakra-ui/react'
 
-
-const Image = (props: ImageProps) => {
-    return (
-        <NextImage
-            {...props}
-            priority={false}
-            loading="lazy"
-        />
-    );
+const Image = (props: any) => {
+    return <ChakraImage {...props} />;
 }
 
 
