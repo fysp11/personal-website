@@ -16,9 +16,13 @@ import { useContext } from 'react'
 import { ProfileContext } from '../providers/profile'
 import { BioHeader } from '../components/layouts/bio-header'
 import Experiences from '../components/experiences'
-import { EXPERIENCES_DATA } from '../constants/experiences'
+import { Experience, EXPERIENCES_DATA } from '../constants/experiences'
 
-const Home = () => {
+interface HomeProps {
+  experiences: Experience[]
+}
+
+const Home = ({ experiences }: HomeProps) => {
 
   const { personal, social } = useContext<ProfileProps>(ProfileContext)
 
@@ -37,7 +41,7 @@ const Home = () => {
       </Section>
 
       <Section delay={0.2}>
-        <Experiences experiences={EXPERIENCES_DATA}></Experiences>
+        <Experiences experiences={experiences}></Experiences>
       </Section>
 
       <Section delay={0.3}>
@@ -68,5 +72,13 @@ const Home = () => {
 }
 
 export default Home
+
+export const getStaticProps = async () => {
+  return {
+    props: {
+      experiences: EXPERIENCES_DATA,
+    }
+  }
+}
 
 
