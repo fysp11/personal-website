@@ -19,24 +19,47 @@ const Main = ({ children, router }: PropsWithChildren<MainProps>) => {
     return (
         <Box as="main" pb={8}>
             <Head>
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+                <meta charSet="utf-8" />
+                <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+                <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+                <meta name="description" content={`${name}' bio page`} />
+                <meta name="keywords" content="web3, climate, tech, future, love, brazil" />
+
                 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
                 <meta name="author" content={name} />
                 <meta name="description" content={bio} />
+
                 <meta name="twitter:card" content="summary_large_image" />
-                {/* <meta name="twitter:site" content={`@${twitter}`} /> */}
                 <meta name="twitter:creator" content={`@${twitter}`} />
                 <meta name="twitter:title" content={name} />
                 <meta name="twitter:image" content={avatar} />
+
+                <meta property="og:type" content="website" />
+                <meta name="og:title" content={name} />
                 <meta property="og:site_name" content={name} />
                 <meta property="og:description" content={bio} />
-                <meta name="og:title" content={name} />
-                <meta property="og:type" content="website" />
                 <meta property="og:image" content={avatar} />
                 <meta property="og:image:width" content="192" />
                 <meta property="og:image:height" content="192" />
-                <title>{name} - Homepage</title>
+
+                <link rel="manifest" href="/manifest.json" />
+                <link
+                    href="/static/images/icons/icon-72x72.png"
+                    rel="icon"
+                    type="image/png"
+                    sizes="72x72"
+                />
+                <link
+                    href="/static/images/icons/icon-96x96.png"
+                    rel="icon"
+                    type="image/png"
+                    sizes="96x96"
+                />
+                <link rel="apple-touch-icon" href="/apple-touch.png" />
+                <meta name="theme-color" content="#88ccca" />
+
+                <title>{name}&apos;s bio page</title>
             </Head>
 
             <NavBar path={router.asPath} />

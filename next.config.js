@@ -1,3 +1,5 @@
+const withPWA = require('next-pwa')
+const runtimeCaching = require('next-pwa/cache')
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
@@ -47,7 +49,7 @@ const securityHeaders = [
 ]
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+let nextConfig = {
   reactStrictMode: true,
   dynamicAssetPrefix: true,
   async headers() {
@@ -60,6 +62,14 @@ const nextConfig = {
     ]
   },
 }
+
+nextConfig = withPWA({
+  ...nextConfig,
+  pwa: {
+    dest: 'public',
+    runtimeCaching,
+  },
+})
 
 module.exports = withBundleAnalyzer({
   ...nextConfig,
