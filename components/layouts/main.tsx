@@ -14,29 +14,45 @@ interface MainProps {
 }
 
 const Main = ({ children, router }: PropsWithChildren<MainProps>) => {
-    const { personal: { name, avatar, subtitle: bio }, social: { twitter } } = useContext<ProfileProps>(ProfileContext)
+    const { personal: { name, avatar, subtitle: bio, tags }, social: { twitter } } = useContext<ProfileProps>(ProfileContext)
+
+
 
     return (
         <Box as="main" pb={8}>
             <Head>
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-                <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+                <meta charSet="utf-8" />
+                <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+                <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+                <meta name="description" content={`${name}' bio page`} />
+
+                <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+                <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+                <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+                <link rel="manifest" href="/manifest.json" />
+                <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+                <meta name="msapplication-TileColor" content="#da532c" />
+                <meta name="theme-color" content="#88ccca" />
+
                 <meta name="author" content={name} />
                 <meta name="description" content={bio} />
+                <meta name="keywords" content={tags.join(", ")} />
+
                 <meta name="twitter:card" content="summary_large_image" />
-                {/* <meta name="twitter:site" content={`@${twitter}`} /> */}
                 <meta name="twitter:creator" content={`@${twitter}`} />
                 <meta name="twitter:title" content={name} />
                 <meta name="twitter:image" content={avatar} />
+
+                <meta property="og:type" content="website" />
+                <meta name="og:title" content={name} />
                 <meta property="og:site_name" content={name} />
                 <meta property="og:description" content={bio} />
-                <meta name="og:title" content={name} />
-                <meta property="og:type" content="website" />
                 <meta property="og:image" content={avatar} />
                 <meta property="og:image:width" content="192" />
                 <meta property="og:image:height" content="192" />
-                <title>{name} - Homepage</title>
+
+
+                <title>{name}&apos;s bio page</title>
             </Head>
 
             <NavBar path={router.asPath} />

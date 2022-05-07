@@ -10,6 +10,7 @@ export interface PersonalProps {
     avatar: string;
     irlAvatar: string;
     bio: string[];
+    tags: string[];
 }
 
 export type ProfileSocialProps = Record<string, [string, IconType]>
@@ -30,7 +31,8 @@ export const ME_PROFILE: ProfileProps = {
             `I'm currently a software developer with a background in clinical psychology moving towards
             regenerative ventures (climate and public goods). In my free time, I like to hike, play basketball,
             listen to music, travel and be with friends.`
-        ]
+        ],
+        tags: ["web3", "climate", "tech", "future", "love", "brazil"]
     },
     social: {
         twitter: ['https://twitter.com/fysp', IoLogoTwitter],
