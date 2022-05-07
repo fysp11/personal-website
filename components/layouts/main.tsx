@@ -14,7 +14,9 @@ interface MainProps {
 }
 
 const Main = ({ children, router }: PropsWithChildren<MainProps>) => {
-    const { personal: { name, avatar, subtitle: bio }, social: { twitter } } = useContext<ProfileProps>(ProfileContext)
+    const { personal: { name, avatar, subtitle: bio, tags }, social: { twitter } } = useContext<ProfileProps>(ProfileContext)
+
+
 
     return (
         <Box as="main" pb={8}>
@@ -23,12 +25,18 @@ const Main = ({ children, router }: PropsWithChildren<MainProps>) => {
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
                 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
                 <meta name="description" content={`${name}' bio page`} />
-                <meta name="keywords" content="web3, climate, tech, future, love, brazil" />
 
-                <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+                <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+                <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+                <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+                <link rel="manifest" href="/manifest.json" />
+                <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+                <meta name="msapplication-TileColor" content="#da532c" />
+                <meta name="theme-color" content="#88ccca" />
 
                 <meta name="author" content={name} />
                 <meta name="description" content={bio} />
+                <meta name="keywords" content={tags.join(", ")} />
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:creator" content={`@${twitter}`} />
@@ -43,21 +51,6 @@ const Main = ({ children, router }: PropsWithChildren<MainProps>) => {
                 <meta property="og:image:width" content="192" />
                 <meta property="og:image:height" content="192" />
 
-                <link rel="manifest" href="/manifest.json" />
-                <link
-                    href="/static/images/icons/icon-72x72.png"
-                    rel="icon"
-                    type="image/png"
-                    sizes="72x72"
-                />
-                <link
-                    href="/static/images/icons/icon-96x96.png"
-                    rel="icon"
-                    type="image/png"
-                    sizes="96x96"
-                />
-                <link rel="apple-touch-icon" href="/apple-touch.png" />
-                <meta name="theme-color" content="#88ccca" />
 
                 <title>{name}&apos;s bio page</title>
             </Head>
