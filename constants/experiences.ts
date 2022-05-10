@@ -35,7 +35,7 @@ export const EXPERIENCES_DATA: Experience[] = [
     {
         year: 2017,
         comments: [
-            'After some freelance work, I got my first job as a web developer',
+            'After some freelance work, I got my first job as a web developer at Intellibtand',
         ],
     },
     {
