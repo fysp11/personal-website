@@ -1,6 +1,6 @@
 import { IconType } from 'react-icons';
 import { IoLogoGithub, IoLogoTwitter, IoLogoHtml5 } from 'react-icons/io5'
-import { FaCalendarPlus } from 'react-icons/fa'
+import { FaCalendarPlus, FaEthereum } from 'react-icons/fa'
 
 import { AVATAR_PNG, IRL_AVATAR_JPEG } from "./assets";
 
@@ -38,6 +38,7 @@ export const ME_PROFILE: ProfileProps = {
         twitter: ['https://twitter.com/fysp', IoLogoTwitter],
         github: ['https://github.com/fysp11', IoLogoGithub],
         website: ['https://fysp.eth.limo', IoLogoHtml5],
+        poap: ['https://app.poap.xyz/scan/fysp.eth', FaEthereum],
         calendly: ['https://calendly.com/fysp', FaCalendarPlus],
     },
 }
