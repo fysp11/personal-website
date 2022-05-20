@@ -1,6 +1,6 @@
 import { IconType } from 'react-icons';
 import { IoLogoGithub, IoLogoTwitter, IoLogoHtml5 } from 'react-icons/io5'
-import { FaCalendarPlus, FaEthereum } from 'react-icons/fa'
+import { FaCalendarPlus, FaEthereum, FaEnvira } from 'react-icons/fa'
 
 import { AVATAR_PNG, IRL_AVATAR_JPEG } from "./assets";
 
@@ -40,5 +40,6 @@ export const ME_PROFILE: ProfileProps = {
         website: ['https://fysp.eth.limo', IoLogoHtml5],
         poap: ['https://app.poap.xyz/scan/fysp.eth', FaEthereum],
         calendly: ['https://calendly.com/fysp', FaCalendarPlus],
+        changeblock: ['https://beta.changeblock.com/sign-up?invite=8LODzWT_oO', FaEnvira]
     },
 }
