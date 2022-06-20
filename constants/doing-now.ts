@@ -9,7 +9,7 @@ export const CurrentActivities: CurrentActivity[] = [
         comments: [
             'Will be travelling and participating of conferences,',
             'mainly around Regeneration & Blockchain.',
-            'Rainforest Day, ETH Barcelona, Sustainable Blockchain summit',
+            'Rainforest Day, ETH Barcelona, Sustainable Blockchain summit,',
             'Metaverse Summit'
         ]
     },
