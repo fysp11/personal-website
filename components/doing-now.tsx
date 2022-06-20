@@ -17,12 +17,11 @@ const DoingNow = ({ activities }: ExperiencesProps) => {
             .map((activity, index) => (
                 <BioSection key={index}>
                     <BioYear>{activity.ref}</BioYear>
-                    {React.Children.toArray(activity.comments.map(comment => (
-                        <>
-                            <span className="hover-underline-animation" >{comment}.</span>
-                            {<br />}
-                        </>
-                    )))}
+                    <span className="hover-underline-animation" >
+                        {activity.comments.join(' ')}.
+                    </span>
+                    {<br />}
+    
                 </BioSection>
             ))}
     </>
