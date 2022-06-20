@@ -5,18 +5,12 @@ export interface CurrentActivity {
 
 export const CurrentActivities: CurrentActivity[] = [
     {
-        ref: '1',
+        ref: 'july',
         comments: [
-            'Currently working with web3 companies in the space',
-            'Attended in my first blockchain conferences: Ethereum Rio (won a hackathon) and Amsterdam DevConnect',
-            'Worked remotely in a team of 4 for the 2nd consecutive year',
+            'Will be travelling and participating of conferences,',
+            'mainly around Regeneration & Blockchain.',
+            'Rainforest Day, ETH Barcelona, Sustainable Blockchain summit',
+            'Metaverse Summit'
         ]
-    },
-    {
-        ref: '2',
-        comments: [
-            'Visited the Amazon Rainforest for the first time',
-            'Learned about blockchain technology and decided to move towards it',
-        ],
     },
 ]
