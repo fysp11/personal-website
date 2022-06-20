@@ -17,12 +17,15 @@ import { ProfileContext } from '../providers/profile'
 import { BioHeader } from '../components/layouts/bio-header'
 import Experiences from '../components/experiences'
 import { Experience, EXPERIENCES_DATA } from '../constants/experiences'
+import DoingNow from '../components/doing-now'
+import { CurrentActivities as CURRENT_ACTIVITIES, CurrentActivity } from '../constants/doing-now'
 
 interface HomeProps {
   experiences: Experience[]
+  currentActivities: CurrentActivity[]
 }
 
-const Home = ({ experiences }: HomeProps) => {
+const Home = ({ experiences, currentActivities }: HomeProps) => {
 
   const { personal, social } = useContext<ProfileProps>(ProfileContext)
 
@@ -41,6 +44,7 @@ const Home = ({ experiences }: HomeProps) => {
       </Section>
 
       <Section delay={0.2}>
+        <DoingNow activities={currentActivities} />
         <Experiences experiences={experiences}></Experiences>
       </Section>
 
@@ -77,6 +81,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       experiences: EXPERIENCES_DATA,
+      currentActivities: CURRENT_ACTIVITIES
     }
   }
 }
