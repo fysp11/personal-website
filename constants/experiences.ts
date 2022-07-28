@@ -7,6 +7,12 @@ export const EXPERIENCES_DATA: Experience[] = [
     {
         year: 2022,
         comments: [
+            (
+                `Participated in multiple tech conferences in Europe,'
+                'mainly around Regeneration & Blockchain.',
+                'Rainforest Day, ETH Barcelona, Sustainable Blockchain summit,',
+                'Metaverse Summit`
+            ),
             'Currently working with web3 companies in the space',
             'Attended in my first blockchain conferences: Ethereum Rio (won a hackathon) and Amsterdam DevConnect',
             'Worked remotely in a team of 4 for the 2nd consecutive year',

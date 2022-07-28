@@ -5,12 +5,11 @@ export interface CurrentActivity {
 
 export const CurrentActivities: CurrentActivity[] = [
     {
-        ref: 'july',
+        ref: 'august',
         comments: [
-            'Will be travelling and participating of conferences,',
-            'mainly around Regeneration & Blockchain.',
-            'Rainforest Day, ETH Barcelona, Sustainable Blockchain summit,',
-            'Metaverse Summit'
+            'Entering a personal retrospective mode after all the web3/refi',
+            'events had the privilige to attend. Hoping to make start a new cycle',
+            "of my career by using all I've learned so far. See you in September!",
         ]
     },
 ]
