@@ -9,7 +9,7 @@ export const CurrentActivities: CurrentActivity[] = [
         comments: [
             'Entering a personal retrospective mode after all the web3/refi',
             'events had the privilige to attend. Hoping to make start a new cycle',
-            "of my career by using all I've learned so far. See you in September!",
+            "of my career by using all I've learned so far. See you in September",
         ]
     },
 ]
