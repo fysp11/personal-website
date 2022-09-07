@@ -62,6 +62,7 @@ const Home = ({ experiences, currentActivities }: HomeProps) => {
                   <Button
                     variant="ghost"
                     colorScheme="teal"
+                    outline="none"
                     leftIcon={<Icon as={icon} />}
                   >
                     {key}
