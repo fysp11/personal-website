@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import Head from 'next/head'
-import { PropsWithChildren } from 'react'
+import { PropsWithChildren, useMemo } from 'react'
 import { GridItemStyle } from '../grid-item'
 
 const variants = {
@@ -13,8 +13,9 @@ interface LayoutProps {
     title?: string
 }
 
-const Layout = ({ children, title }: PropsWithChildren<LayoutProps>) => {
-    const t = `${title} - Takuya Matsuyama`
+const Layout = ({ children, title = '' }: PropsWithChildren<LayoutProps>) => {
+
+    const fullTitle = useMemo(() => `${title} - fysp`, [title])
     return (
         <motion.article
             initial="hidden"
@@ -27,9 +28,9 @@ const Layout = ({ children, title }: PropsWithChildren<LayoutProps>) => {
             <>
                 {title && (
                     <Head>
-                        <title>{t}</title>
-                        <meta name="twitter:title" content={t} />
-                        <meta property="og:title" content={t} />
+                        <title>{fullTitle}</title>
+                        <meta name="twitter:title" content={fullTitle} />
+                        <meta property="og:title" content={fullTitle} />
                     </Head>
                 )}
                 {children}
