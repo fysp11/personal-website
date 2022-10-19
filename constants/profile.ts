@@ -1,6 +1,6 @@
 import { IconType } from 'react-icons';
 import { IoLogoGithub, IoLogoTwitter, IoLogoHtml5 } from 'react-icons/io5'
-import { FaCalendarPlus, FaEthereum, FaEnvira } from 'react-icons/fa'
+import { FaCalendarPlus, FaEthereum } from 'react-icons/fa'
 
 import { AVATAR_PNG, IRL_AVATAR_JPEG } from "./assets";
 
@@ -13,11 +13,17 @@ export interface PersonalProps {
     tags: string[];
 }
 
-export type ProfileSocialProps = Record<string, [string, IconType]>
+interface SocialItem {
+    label: string
+    url: string
+    icon: IconType
+}
+
+export type SocialItemList = SocialItem[]
 
 export interface ProfileProps {
     personal: PersonalProps,
-    social: ProfileSocialProps,
+    socials: SocialItem[],
 }
 
 
@@ -34,12 +40,31 @@ export const ME_PROFILE: ProfileProps = {
         ],
         tags: ["web3", "climate", "tech", "future", "love", "brazil"]
     },
-    social: {
-        twitter: ['https://twitter.com/fysp', IoLogoTwitter],
-        github: ['https://github.com/fysp11', IoLogoGithub],
-        website: ['https://fysp.eth.limo', IoLogoHtml5],
-        poap: ['https://app.poap.xyz/scan/fysp.eth', FaEthereum],
-        calendly: ['https://calendly.com/fysp', FaCalendarPlus],
-        changeblock: ['https://beta.changeblock.com/sign-up?invite=8LODzWT_oO', FaEnvira]
-    },
+    socials: [
+        {
+            label: 'twitter',
+            url: 'https://twitter.com/fysp',
+            icon: IoLogoTwitter
+        },
+        {
+            label: 'github',
+            url: 'https://github.com/fysp11',
+            icon: IoLogoGithub
+        },
+        {
+            label: 'website',
+            url: 'https://fysp.eth.limo',
+            icon: IoLogoHtml5
+        },
+        {
+            label: 'poap',
+            url: 'https://app.poap.xyz/scan/fysp.eth',
+            icon: FaEthereum
+        },
+        {
+            label: 'calendly',
+            url: 'https://calendly.com/fysp',
+            icon: FaCalendarPlus
+        },
+    ],
 }
