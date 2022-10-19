@@ -1,12 +1,4 @@
-import {
-  Link,
-  Container,
-  Heading,
-  Button,
-  List,
-  ListItem,
-  Icon,
-} from '@chakra-ui/react'
+import { Link, Container, Heading, Button, List, ListItem, Icon } from '@chakra-ui/react'
 import Paragraph from '../components/paragraph'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
@@ -17,16 +9,13 @@ import { ProfileContext } from '../providers/profile'
 import { BioHeader } from '../components/layouts/bio-header'
 import Experiences from '../components/experiences'
 import { Experience, EXPERIENCES_DATA } from '../constants/experiences'
-import DoingNow from '../components/doing-now'
-import { CurrentActivities as CURRENT_ACTIVITIES, CurrentActivity } from '../constants/doing-now'
+
 
 interface HomeProps {
   experiences: Experience[]
-  currentActivities: CurrentActivity[]
 }
 
-const Home = ({ experiences, currentActivities }: HomeProps) => {
-
+const Home = ({ experiences }: HomeProps) => {
   const { personal, social } = useContext<ProfileProps>(ProfileContext)
 
   return <Layout>
@@ -43,8 +32,7 @@ const Home = ({ experiences, currentActivities }: HomeProps) => {
         ))}
       </Section>
 
-      <Section delay={0.2}>
-        <DoingNow activities={currentActivities} />
+      <Section delay={0.1}>
         <Experiences experiences={experiences}></Experiences>
       </Section>
 
@@ -78,11 +66,10 @@ const Home = ({ experiences, currentActivities }: HomeProps) => {
 
 export default Home
 
-export const getStaticProps = async () => {
+export const getStaticProps = async (): Promise<{ props: HomeProps }> => {
   return {
     props: {
       experiences: EXPERIENCES_DATA,
-      currentActivities: CURRENT_ACTIVITIES
     }
   }
 }
