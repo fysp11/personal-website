@@ -1,4 +1,4 @@
-import { PropsWithChildren, useContext } from 'react'
+import { PropsWithChildren, useContext, useMemo } from 'react'
 import Head from 'next/head'
 import { Box, Container } from '@chakra-ui/react'
 import { Router } from 'next/router'
@@ -14,7 +14,12 @@ interface MainProps {
 }
 
 const Main = ({ children, router }: PropsWithChildren<MainProps>) => {
-    const { personal: { name, avatar, subtitle: bio, tags }, social: { twitter } } = useContext<ProfileProps>(ProfileContext)
+    const { personal: { name, avatar, subtitle: bio, tags }, socials } = useContext<ProfileProps>(ProfileContext)
+
+    const twitterHandle = useMemo(() => {
+        const twitterData = socials.find(({ label }) => label === 'twitter')
+        return twitterData!.url.replace('https://twitter.com/', '')
+    }, [socials])
 
 
 
@@ -39,7 +44,7 @@ const Main = ({ children, router }: PropsWithChildren<MainProps>) => {
                 <meta name="keywords" content={tags.join(", ")} />
 
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:creator" content={`@${twitter}`} />
+                <meta name="twitter:creator" content={`@${twitterHandle}`} />
                 <meta name="twitter:title" content={name} />
                 <meta name="twitter:image" content={avatar} />
 
