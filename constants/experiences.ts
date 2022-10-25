@@ -7,6 +7,8 @@ export const EXPERIENCES_DATA: Experience[] = [
     {
         year: 2022,
         comments: [
+            'Trying to catch up on climate policies international forums, like OECD, COP27 and alike',
+            'Started working with planet positive projects within the Climate Tech space',
             'Participated in multiple tech conferences in Europe, mainly around Regeneration & Blockchain',
             'Rainforest Day, ETH Barcelona, Sustainable Blockchain summit, Metaverse Summit',
             'Currently working with web3 companies in the space',
@@ -24,7 +26,7 @@ export const EXPERIENCES_DATA: Experience[] = [
     {
         year: 2019,
         comments: [
-            'Became a cloud data engineer at Schuberg Philis',
+            'Became a cloud data engineer at Technology Consultancy company',
             'Got a job offer to work and live in The Netherlands',
         ],
     },
