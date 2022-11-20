@@ -26,7 +26,6 @@ interface LogoProps {
 
 
 const Logo = ({ text, logo }: LogoProps) => {
-    // const footPrintImg = `/images/footprint${useColorModeValue('', '-dark')}.png`
     const squareSize = '20px'
 
     return (

@@ -52,6 +52,7 @@ const securityHeaders = [
 let nextConfig = {
   reactStrictMode: true,
   dynamicAssetPrefix: true,
+  swcMinify: true,
   async headers() {
     return [
       {
