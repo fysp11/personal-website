@@ -1,5 +1,4 @@
-import { useContext } from 'react'
-import type { GetStaticProps } from 'next'
+import { useState } from 'react'
 import { Container, Heading } from '@chakra-ui/react'
 import dynamic from 'next/dynamic'
 
@@ -8,10 +7,8 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import Experiences from '../components/experiences'
 
-import { ProfileContext } from '../providers/profile'
-
-import type { ProfileProps } from '../constants/profile'
-import { Experience, EXPERIENCES_DATA } from '../constants/experiences'
+import { ME_PROFILE } from '../constants/profile'
+import { EXPERIENCES_DATA } from '../constants/experiences'
 
 
 const BioHeader = dynamic(() => import('../components/layouts/bio-header'))
@@ -21,11 +18,8 @@ const SocialView = dynamic(
   { loading: () => <p>Loading ...</p>, ssr: false }
 )
 
-interface HomeProps {
-  experiences: Experience[]
-}
-const Home = ({ experiences }: HomeProps) => {
-  const { personal, socials } = useContext<ProfileProps>(ProfileContext)
+const Home = () => {
+  const [{ personal, socials }] = useState(ME_PROFILE)
 
   return <Layout>
     <Container>
@@ -42,7 +36,7 @@ const Home = ({ experiences }: HomeProps) => {
       </Section>
 
       <Section delay={0.1}>
-        <Experiences experiences={experiences}></Experiences>
+        <Experiences experiences={EXPERIENCES_DATA}></Experiences>
       </Section>
 
       <Section delay={0.3}>
@@ -52,14 +46,4 @@ const Home = ({ experiences }: HomeProps) => {
   </Layout>
 }
 
-export default Home
-
-export const getStaticProps: GetStaticProps<HomeProps> = async () => {
-  return {
-    props: {
-      experiences: EXPERIENCES_DATA,
-    }
-  }
-}
-
-
+export default Home;
