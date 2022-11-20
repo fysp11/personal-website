@@ -9,7 +9,6 @@
 		"ghcr.io/devcontainers/features/git:1": {},
 		"ghcr.io/devcontainers/features/github-cli:1": {},
 		"ghcr.io/devcontainers/features/node:1": {},
-		"ghcr.io/devcontainers-contrib/features/deno:1": {},
 		"ghcr.io/devcontainers-contrib/features/pulumi:1": {},
 		"ghcr.io/devcontainers-contrib/features/qrcode:1": {}
 	},
