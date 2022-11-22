@@ -14,7 +14,6 @@ interface LayoutProps {
 }
 
 const Layout = ({ children, title = '' }: PropsWithChildren<LayoutProps>) => {
-
     const fullTitle = useMemo(() => `${title} - fysp`, [title])
     return (
         <motion.article

@@ -1,4 +1,5 @@
-import { PropsWithChildren, useContext, useEffect, useMemo } from 'react'
+"use client"
+import { PropsWithChildren, useMemo } from 'react'
 import Head from 'next/head'
 import { Box, Container } from '@chakra-ui/react'
 import { Router } from 'next/router'
@@ -7,16 +8,15 @@ import Footer from '../footer'
 import NavBar from '../navbar'
 
 import { ProfileProps } from '../../constants/profile'
-import { ProfileContext } from '../../providers/profile'
 import Chakra from '../chakra'
 import Fonts from '../fonts'
+import Logo from '../logo'
 
 interface MainProps {
     router: Router
 }
 
 const Main = ({ children, router }: PropsWithChildren<MainProps>) => {
-    const { personal: { name, avatar, subtitle: bio, tags }, socials } = useContext<ProfileProps>(ProfileContext)
     const pageTitle = `${name}'s bio page`
 
     const twitterHandle = useMemo(() => {
@@ -24,11 +24,9 @@ const Main = ({ children, router }: PropsWithChildren<MainProps>) => {
         return twitterData!.url.replace('https://twitter.com/', '')
     }, [socials])
 
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-            window.history.scrollRestoration = 'manual'
-        }
-    }, [])
+    if (typeof window !== 'undefined') {
+        window.history.scrollRestoration = 'manual'
+    }
 
     return (
         <>
@@ -70,7 +68,10 @@ const Main = ({ children, router }: PropsWithChildren<MainProps>) => {
                         <title>{pageTitle}</title>
                     </Head>
 
-                    <NavBar path={router.asPath} />
+                    <NavBar
+                        path={router.asPath}
+                        logo={<Logo logo={avatar} text={name} />}
+                    />
                     <Container maxW="container.md" pt={14}>
                         {children}
                         <Footer />

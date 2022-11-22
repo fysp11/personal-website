@@ -1,3 +1,4 @@
+"use client"
 import Logo from './logo'
 import {
     Container,
@@ -7,15 +8,15 @@ import {
     Flex,
     useColorModeValue
 } from '@chakra-ui/react'
-import { useContext, useEffect, useState } from 'react'
+import { ReactNode, useContext, useEffect, useState } from 'react'
 
 import ThemeToggleButton from './theme-toggle-button'
 import { ProfileProps } from '../constants/profile'
-import { ProfileContext } from '../providers/profile'
 
 
 interface NavbarProps {
     path: string,
+    logo: ReactNode
 }
 
 const Navbar = (props: NavbarProps) => {

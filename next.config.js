@@ -1,5 +1,3 @@
-const withPWA = require('next-pwa')
-const runtimeCaching = require('next-pwa/cache')
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
@@ -49,10 +47,9 @@ const securityHeaders = [
 ]
 
 /** @type {import('next').NextConfig} */
-let nextConfig = {
-  reactStrictMode: true,
-  dynamicAssetPrefix: true,
+module.exports = withBundleAnalyzer({
   swcMinify: true,
+  experimental: { appDir: true },
   async headers() {
     return [
       {
@@ -62,31 +59,4 @@ let nextConfig = {
       },
     ]
   },
-}
-
-nextConfig = withPWA({
-  ...nextConfig,
-  pwa: {
-    dest: 'public',
-    runtimeCaching,
-  },
-})
-
-module.exports = withBundleAnalyzer({
-  ...nextConfig,
-  webpack(config, { isServer }) {
-    if (!isServer) {
-      config.optimization.splitChunks.cacheGroups = {
-        ...config.optimization.splitChunks.cacheGroups,
-        '@chakra-ui': {
-          test: /[\\/]node_modules[\\/](@chakra-ui)[\\/]/,
-          name: '@chakra-ui',
-          priority: 10,
-          reuseExistingChunk: false,
-        },
-      };
-    }
-
-    return config;
-  }
 })
