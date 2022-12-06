@@ -4,7 +4,9 @@ specifiers:
   '@babel/core': ^7.20.5
   '@chakra-ui/icons': ^2.0.13
   '@chakra-ui/react': ^2.4.2
+  '@chakra-ui/styled-system': ^2.4.0
   '@chakra-ui/system': ^2.3.4
+  '@chakra-ui/theme-tools': ^2.0.14
   '@emotion/react': ^11.10
   '@emotion/styled': ^11.10
   '@next/bundle-analyzer': ^13.0
@@ -26,7 +28,9 @@ dependencies:
   '@babel/core': 7.20.5
   '@chakra-ui/icons': 2.0.13_xivvz2l3eyrkvszadds3phcwaq
   '@chakra-ui/react': 2.4.2_366jsnbj2fqgpp64v3qddukxli
+  '@chakra-ui/styled-system': 2.4.0
   '@chakra-ui/system': 2.3.4_dovxhg2tvkkxkdnqyoum6wzcxm
+  '@chakra-ui/theme-tools': 2.0.14_wydxv7ulravhb2h4fp66dsrywe
   '@emotion/react': 11.10.5_xl5my4wapvq2ctl7qwehtbgorq
   '@emotion/styled': 11.10.5_3djhvnr4jirfvebjqpipo7gthy
   framer-motion: 7.6.19_biqbaboplfbrettd7655fr4n2y
