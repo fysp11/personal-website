@@ -1,18 +1,25 @@
 import { useContext } from 'react'
-import { GetStaticProps } from 'next'
-import { Link, Container, Heading, Button, List, ListItem, Icon } from '@chakra-ui/react'
+import type { GetStaticProps } from 'next'
+import { Container, Heading } from '@chakra-ui/react'
+import dynamic from 'next/dynamic'
 
 import Paragraph from '../components/paragraph'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { BioHeader } from '../components/layouts/bio-header'
 import Experiences from '../components/experiences'
 
 import { ProfileContext } from '../providers/profile'
 
-import { ProfileProps } from '../constants/profile'
+import type { ProfileProps } from '../constants/profile'
 import { Experience, EXPERIENCES_DATA } from '../constants/experiences'
 
+
+const BioHeader = dynamic(() => import('../components/layouts/bio-header'))
+
+const SocialView = dynamic(
+  () => import('../views/Socials'),
+  { loading: () => <p>Loading ...</p>, ssr: false }
+)
 
 interface HomeProps {
   experiences: Experience[]
@@ -39,26 +46,7 @@ const Home = ({ experiences }: HomeProps) => {
       </Section>
 
       <Section delay={0.3}>
-        <Heading as="h3" variant="section-title">
-          Social
-        </Heading>
-        <List>
-          {socials
-            .map((socialItem) => (
-              <ListItem key={socialItem.label}>
-                <Link href={socialItem.url} target="_blank">
-                  <Button
-                    variant="ghost"
-                    colorScheme="teal"
-                    outline="none"
-                    leftIcon={<Icon as={socialItem.icon} />}
-                  >
-                    {socialItem.label}
-                  </Button>
-                </Link>
-              </ListItem>
-            ))}
-        </List>
+        <SocialView socials={socials} />
       </Section>
     </Container>
   </Layout>

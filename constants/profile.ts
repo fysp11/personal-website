@@ -4,6 +4,7 @@ import { FaCalendarPlus, FaEthereum } from 'react-icons/fa'
 
 import { AVATAR_PNG, IRL_AVATAR_JPEG } from "./assets";
 
+
 export interface PersonalProps {
     name: string;
     subtitle: string;
@@ -13,7 +14,7 @@ export interface PersonalProps {
     tags: string[];
 }
 
-interface SocialItem {
+export interface SocialItem {
     label: string
     url: string
     icon: IconType
