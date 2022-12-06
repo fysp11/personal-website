@@ -21,7 +21,7 @@ const Main = ({ children, router }: PropsWithChildren<MainProps>) => {
         return twitterData!.url.replace('https://twitter.com/', '')
     }, [socials])
 
-
+    const title = `${name}'s bio page`
 
     return (
         <Box as="main" pb={8}>
@@ -57,7 +57,7 @@ const Main = ({ children, router }: PropsWithChildren<MainProps>) => {
                 <meta property="og:image:height" content="192" />
 
 
-                <title>{name}&apos;s bio page</title>
+                <title>{title}</title>
             </Head>
 
             <NavBar path={router.asPath} />

@@ -7,7 +7,7 @@ const ProfileImage = chakra(Image, {
     shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
 })
 
-export function BioHeader({ personal }: { personal: PersonalProps }) {
+export default function BioHeader({ personal }: { personal: PersonalProps }) {
     const squareSize = '96px'
     return <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>

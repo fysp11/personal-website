@@ -31,27 +31,24 @@ const Logo = ({ text, logo }: LogoProps) => {
 
     return (
         <Link href="/" scroll={false}>
-            <a>
-                <LogoBox>
-
-                    <Image
-                        src={logo}
-                        width={squareSize}
-                        height={squareSize}
-                        maxWidth={squareSize}
-                        maxHeight={squareSize}
-                        alt="logo"
-                    />
-                    <Text
-                        color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-                        fontFamily='M PLUS Rounded 1c", sans-serif'
-                        fontWeight="bold"
-                        ml={3}
-                    >
-                        {text}
-                    </Text>
-                </LogoBox>
-            </a>
+            <LogoBox>
+                <Image
+                    src={logo}
+                    width={squareSize}
+                    height={squareSize}
+                    maxWidth={squareSize}
+                    maxHeight={squareSize}
+                    alt="logo"
+                />
+                <Text
+                    color={useColorModeValue('gray.800', 'whiteAlpha.900')}
+                    fontFamily='M PLUS Rounded 1c", sans-serif'
+                    fontWeight="bold"
+                    ml={3}
+                >
+                    {text}
+                </Text>
+            </LogoBox>
         </Link>
     )
 }
