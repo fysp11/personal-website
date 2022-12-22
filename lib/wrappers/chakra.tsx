@@ -1,9 +1,9 @@
 import { ChakraProvider, localStorageManager } from '@chakra-ui/react'
 import { PropsWithChildren } from 'react'
-import theme from '../lib/theme'
+import theme from '../theme'
 
 
-export default function Chakra({ children }: PropsWithChildren) {
+export default function ChakraWrapper({ children }: PropsWithChildren) {
   return (
     <ChakraProvider theme={theme} colorModeManager={localStorageManager}>
       {children}

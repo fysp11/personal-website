@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion'
 import Head from 'next/head'
-import { PropsWithChildren, useMemo } from 'react'
-import { GridItemStyle } from '../grid-item'
+import { PropsWithChildren } from 'react'
+import { GridItemStyle } from '../ui/grid-item'
+import NavBar from '../nav/navbar'
 
 const variants = {
     hidden: { opacity: 0, x: 0, y: 20 },
@@ -11,10 +12,11 @@ const variants = {
 
 interface LayoutProps {
     title?: string
+    logo: string
 }
 
-const Layout = ({ children, title = '' }: PropsWithChildren<LayoutProps>) => {
-    const fullTitle = useMemo(() => `${title} - fysp`, [title])
+const RootLayout = ({ children, logo, title = '' }: PropsWithChildren<LayoutProps>) => {
+    const fullTitle = `${title} - fysp`
     return (
         <motion.article
             initial="hidden"
@@ -32,6 +34,7 @@ const Layout = ({ children, title = '' }: PropsWithChildren<LayoutProps>) => {
                         <meta property="og:title" content={fullTitle} />
                     </Head>
                 )}
+                <NavBar logo={logo} />
                 {children}
 
                 <GridItemStyle />
@@ -40,4 +43,4 @@ const Layout = ({ children, title = '' }: PropsWithChildren<LayoutProps>) => {
     )
 }
 
-export default Layout
+export default RootLayout;

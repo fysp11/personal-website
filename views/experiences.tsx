@@ -1,7 +1,7 @@
 import { Heading } from "@chakra-ui/react"
 import { Experience } from "../constants/experiences"
 
-import { BioSection, BioYear } from '../components/layouts/bio'
+import { BioSection, BioYear } from '../components/bio/bio-section'
 import React from "react"
 import { getSorter } from "../lib/_helpers"
 

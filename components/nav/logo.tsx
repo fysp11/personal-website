@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Text, useColorModeValue } from '@chakra-ui/react'
 import styled from '@emotion/styled'
-import Image from './image'
+import Image from '../ui/image'
 
 const LogoBox = styled.span`
     font-weight: bold;

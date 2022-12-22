@@ -2,16 +2,16 @@ import { useState } from 'react'
 import { Container, Heading } from '@chakra-ui/react'
 import dynamic from 'next/dynamic'
 
-import Paragraph from '../components/paragraph'
-import Layout from '../components/layouts/article'
-import Section from '../components/section'
-import Experiences from '../components/experiences'
+import Paragraph from '../components/ui/paragraph'
+import RootLayout from '../components/layouts/root'
+import Section from '../components/ui/section'
+import Experiences from '../views/experiences'
 
 import { ME_PROFILE } from '../constants/profile'
 import { EXPERIENCES_DATA } from '../constants/experiences'
 
 
-const BioHeader = dynamic(() => import('../components/layouts/bio-header'))
+const BioHeader = dynamic(() => import('../components/bio/bio-header'))
 
 const SocialView = dynamic(
   () => import('../views/Socials'),
@@ -21,8 +21,8 @@ const SocialView = dynamic(
 const Home = () => {
   const [{ personal, socials }] = useState(ME_PROFILE)
 
-  return <Layout>
-    <Container>
+  return <RootLayout logo={personal.avatar}>
+    <Container pt={120}>
 
       <BioHeader personal={personal} />
 
@@ -30,8 +30,8 @@ const Home = () => {
         <Heading as="h3" variant="section-title">
           Bio
         </Heading>
-        {personal.bio.map((paragraph, index) => (
-          <Paragraph key={index}>{paragraph.trim()}</Paragraph>
+        {personal.bio.map((paragraph) => (
+          <Paragraph key={paragraph}>{paragraph.trim()}</Paragraph>
         ))}
       </Section>
 
@@ -43,7 +43,7 @@ const Home = () => {
         <SocialView socials={socials} />
       </Section>
     </Container>
-  </Layout>
+  </RootLayout>
 }
 
 export default Home;
