@@ -1,5 +1,5 @@
 import { Box, chakra, Heading } from "@chakra-ui/react";
-import Image from '../image'
+import Image from '../ui/image'
 
 import { PersonalProps } from "../../constants/profile";
 

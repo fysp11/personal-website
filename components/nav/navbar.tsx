@@ -1,30 +1,30 @@
-import Logo from './logo'
 import {
     Container,
     Box,
     Stack,
     Heading,
     Flex,
-    useColorModeValue
+    useColorModeValue,
+    useColorMode
 } from '@chakra-ui/react'
-import { useContext, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
+import { ConnectWallet } from "@thirdweb-dev/react";
+
 
 import ThemeToggleButton from './theme-toggle-button'
-import { ProfileProps } from '../constants/profile'
-import { ProfileContext } from '../providers/profile'
+import Image from 'next/image';
 
 
 interface NavbarProps {
-    path: string,
+    logo: string
 }
 
-const Navbar = (props: NavbarProps) => {
-    // const { path } = props
-    const { personal: { avatar, name } } = useContext<ProfileProps>(ProfileContext)
+const Navbar = ({ logo }: NavbarProps) => {
+    const { colorMode } = useColorMode()
     const [pageYOffset, setPageYOffset] = useState(0)
 
     const handleScroll = () => {
-        const position = window.pageYOffset;
+        const position = window.scrollY;
         setPageYOffset(position);
     };
 
@@ -44,7 +44,6 @@ const Navbar = (props: NavbarProps) => {
             bg={useColorModeValue('#ffffff40', '#20202380')}
             css={{ backdropFilter: 'blur(10px)' }}
             zIndex={1}
-            {...props}
         >
             <Container
                 display="flex"
@@ -55,8 +54,8 @@ const Navbar = (props: NavbarProps) => {
                 flexWrap={'wrap'}
             >
                 <Flex align="center" mr={5} flexGrow="revert">
-                    <Heading as="h1" size="lg" letterSpacing={'tighter'} display={pageYOffset > 10 ? 'flex' : 'none'}>
-                        <Logo logo={avatar} text={name} />
+                    <Heading as="h1" size="lg" letterSpacing={'tighter'} opacity={pageYOffset > 47 ? 1 : 0}>
+                        <Image src={logo} alt="logo" width={50} height={50} />
                     </Heading>
                 </Flex>
 
@@ -68,6 +67,7 @@ const Navbar = (props: NavbarProps) => {
                     flexGrow={1}
                     mt={{ base: 4, md: 0 }}
                 >
+                    <ConnectWallet colorMode={colorMode} />
 
                 </Stack>
 

@@ -1,34 +1,28 @@
-import { useContext } from 'react'
-import type { GetStaticProps } from 'next'
+import { useState } from 'react'
 import { Container, Heading } from '@chakra-ui/react'
 import dynamic from 'next/dynamic'
 
-import Paragraph from '../components/paragraph'
-import Layout from '../components/layouts/article'
-import Section from '../components/section'
-import Experiences from '../components/experiences'
+import Paragraph from '../components/ui/paragraph'
+import RootLayout from '../components/layouts/root'
+import Section from '../components/ui/section'
+import Experiences from '../views/experiences'
 
-import { ProfileContext } from '../providers/profile'
-
-import type { ProfileProps } from '../constants/profile'
-import { Experience, EXPERIENCES_DATA } from '../constants/experiences'
+import { ME_PROFILE } from '../constants/profile'
+import { EXPERIENCES_DATA } from '../constants/experiences'
 
 
-const BioHeader = dynamic(() => import('../components/layouts/bio-header'))
+const BioHeader = dynamic(() => import('../components/bio/bio-header'))
 
 const SocialView = dynamic(
   () => import('../views/Socials'),
   { loading: () => <p>Loading ...</p>, ssr: false }
 )
 
-interface HomeProps {
-  experiences: Experience[]
-}
-const Home = ({ experiences }: HomeProps) => {
-  const { personal, socials } = useContext<ProfileProps>(ProfileContext)
+const Home = () => {
+  const [{ personal, socials }] = useState(ME_PROFILE)
 
-  return <Layout>
-    <Container>
+  return <RootLayout logo={personal.avatar}>
+    <Container pt={120}>
 
       <BioHeader personal={personal} />
 
@@ -36,30 +30,20 @@ const Home = ({ experiences }: HomeProps) => {
         <Heading as="h3" variant="section-title">
           Bio
         </Heading>
-        {personal.bio.map((paragraph, index) => (
-          <Paragraph key={index}>{paragraph.trim()}</Paragraph>
+        {personal.bio.map((paragraph) => (
+          <Paragraph key={paragraph}>{paragraph.trim()}</Paragraph>
         ))}
       </Section>
 
       <Section delay={0.1}>
-        <Experiences experiences={experiences}></Experiences>
+        <Experiences experiences={EXPERIENCES_DATA}></Experiences>
       </Section>
 
       <Section delay={0.3}>
         <SocialView socials={socials} />
       </Section>
     </Container>
-  </Layout>
+  </RootLayout>
 }
 
-export default Home
-
-export const getStaticProps: GetStaticProps<HomeProps> = async () => {
-  return {
-    props: {
-      experiences: EXPERIENCES_DATA,
-    }
-  }
-}
-
-
+export default Home;

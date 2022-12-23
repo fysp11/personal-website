@@ -30,18 +30,17 @@ const components = {
         })
     }
 }
+const colors = {
+    grassTeal: '#88ccca'
+}
 
 const fonts = {
     heading: "'M PLUS Rounded 1c'"
 }
 
-const colors = {
-    grassTeal: '#88ccca'
-}
-
 const config = {
     initialColorMode: 'dark',
-    useSystemColorMode: true
+    useSystemColorMode: true,
 }
 
 const theme = extendTheme({ config, styles, components, fonts, colors })

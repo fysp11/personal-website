@@ -2,40 +2,24 @@ import { AppProps } from 'next/app'
 import { AnimatePresence } from 'framer-motion'
 import { Analytics } from '@vercel/analytics/react';
 
-import Chakra from '../components/chakra'
-import Fonts from '../components/fonts'
-import Layout from '../components/layouts/main'
-import { ProfileContext } from '../providers/profile'
-
-import { ME_PROFILE } from '../constants/profile'
-
 import '../styles/globals.css'
+import Fonts from '../lib/wrappers/fonts'
+import ChakraWrapper from '../lib/wrappers/chakra'
+import ThirdWebWrapper from '../lib/wrappers/tweb';
+import { scrollToTop } from '../components/utils/ui/scroll'
 
-if (typeof window !== 'undefined') {
-  window.history.scrollRestoration = 'manual'
-}
 
 function Website({ Component, pageProps, router }: AppProps) {
   return (
     <>
       <Fonts />
-      <Chakra>
-        <ProfileContext.Provider value={ME_PROFILE}>
-          <Layout router={router}>
-            <AnimatePresence
-              mode='wait'
-              initial={true}
-              onExitComplete={() => {
-                if (typeof window !== 'undefined') {
-                  window.scrollTo({ top: 0 })
-                }
-              }}
-            >
-              <Component {...pageProps} key={router.route} />
-            </AnimatePresence>
-          </Layout>
-        </ProfileContext.Provider>
-      </Chakra>
+      <ChakraWrapper>
+        <ThirdWebWrapper>
+          <AnimatePresence onExitComplete={scrollToTop}>
+            <Component {...pageProps} key={router.route} />
+          </AnimatePresence>
+        </ThirdWebWrapper>
+      </ChakraWrapper>
       <Analytics />
     </>
   )
