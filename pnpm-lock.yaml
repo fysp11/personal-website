@@ -14,7 +14,6 @@ specifiers:
   '@types/node': ^18.11
   '@types/react': ^18.0
   '@types/react-dom': ^18.0
-  '@vercel/analytics': ^0.1.6
   '@walletconnect/web3-provider': ^1.8.0
   eslint: ^8.30
   eslint-config-next: ^13.1
@@ -38,7 +37,6 @@ dependencies:
   '@emotion/styled': 11.10.5_qvatmowesywn4ye42qoh247szu
   '@thirdweb-dev/react': 3.6.8_62sbhmp75xonjffvao35kvmaoy
   '@thirdweb-dev/sdk': 3.6.8_ethers@5.7.2
-  '@vercel/analytics': 0.1.6_react@18.2.0
   '@walletconnect/web3-provider': 1.8.0
   ethers: 5.7.2
   framer-motion: 8.0.2_biqbaboplfbrettd7655fr4n2y
@@ -3169,7 +3167,7 @@ packages:
       '@motionone/easing': 10.15.1
       '@motionone/types': 10.15.1
       '@motionone/utils': 10.15.1
-      tslib: 2.4.0
+      tslib: 2.4.1
     dev: false
 
   /@motionone/dom/10.15.3:
@@ -3180,14 +3178,14 @@ packages:
       '@motionone/types': 10.15.1
       '@motionone/utils': 10.15.1
       hey-listen: 1.0.8
-      tslib: 2.4.0
+      tslib: 2.4.1
     dev: false
 
   /@motionone/easing/10.15.1:
     resolution: {integrity: sha512-6hIHBSV+ZVehf9dcKZLT7p5PEKHGhDwky2k8RKkmOvUoYP3S+dXsKupyZpqx5apjd9f+php4vXk4LuS+ADsrWw==}
     dependencies:
       '@motionone/utils': 10.15.1
-      tslib: 2.4.0
+      tslib: 2.4.1
     dev: false
 
   /@motionone/generators/10.15.1:
@@ -3195,7 +3193,7 @@ packages:
     dependencies:
       '@motionone/types': 10.15.1
       '@motionone/utils': 10.15.1
-      tslib: 2.4.0
+      tslib: 2.4.1
     dev: false
 
   /@motionone/types/10.15.1:
@@ -3207,7 +3205,7 @@ packages:
     dependencies:
       '@motionone/types': 10.15.1
       hey-listen: 1.0.8
-      tslib: 2.4.0
+      tslib: 2.4.1
     dev: false
 
   /@next/bundle-analyzer/13.1.0:
@@ -4012,14 +4010,6 @@ packages:
       '@typescript-eslint/types': 5.47.0
       eslint-visitor-keys: 3.3.0
     dev: true
-
-  /@vercel/analytics/0.1.6_react@18.2.0:
-    resolution: {integrity: sha512-zNd5pj3iDvq8IMBQHa1YRcIteiw6ZiPB8AsONHd8ieFXlNpLqhXfIYnf4WvTfZ7S1NSJ++mIM14aJnNac/VMXQ==}
-    peerDependencies:
-      react: ^16.8||^17||^18
-    dependencies:
-      react: 18.2.0
-    dev: false
 
   /@walletconnect/browser-utils/1.8.0:
     resolution: {integrity: sha512-Wcqqx+wjxIo9fv6eBUFHPsW1y/bGWWRboni5dfD8PtOmrihrEpOCmvRJe4rfl7xgJW8Ea9UqKEaq0bIRLHlK4A==}
