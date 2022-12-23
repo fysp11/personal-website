@@ -48,8 +48,6 @@ const securityHeaders = [
 
 /** @type {import('next').NextConfig} */
 module.exports = withBundleAnalyzer({
-  swcMinify: true,
-  experimental: { appDir: true },
   async headers() {
     return [
       {
