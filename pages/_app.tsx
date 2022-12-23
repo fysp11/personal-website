@@ -1,5 +1,6 @@
 import { AppProps } from 'next/app'
 import { AnimatePresence } from 'framer-motion'
+import { Analytics } from '@vercel/analytics/react';
 
 import Chakra from '../components/chakra'
 import Fonts from '../components/fonts'
@@ -35,6 +36,7 @@ function Website({ Component, pageProps, router }: AppProps) {
           </Layout>
         </ProfileContext.Provider>
       </Chakra>
+      <Analytics />
     </>
   )
 }
