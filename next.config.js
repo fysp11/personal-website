@@ -3,7 +3,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 })
 
 const ContentSecurityPolicy = `
-  default-src *;
+  default-src * data:;
   style-src 'self' 'unsafe-inline';
   style-src-elem 'self' https://fonts.googleapis.com/ 'unsafe-inline';
   script-src 'self' 'unsafe-inline' 'unsafe-eval';
