@@ -41,24 +41,19 @@ export const ME_PROFILE: ProfileProps = {
     },
     socials: [
         {
-            label: "twitter",
-            url: "https://twitter.com/fysp",
-            icon: IoLogoTwitter
-        },
-        {
             label: "github",
             url: "https://github.com/fysp11",
             icon: IoLogoGithub
         },
         {
-            label: "website",
-            url: "https://fysp.eth.limo",
-            icon: IoLogoHtml5
-        },
-        {
             label: "poap",
             url: "https://app.poap.xyz/scan/fysp.eth",
             icon: FaEthereum
+        },
+        {
+            label: "twitter",
+            url: "https://twitter.com/fysp",
+            icon: IoLogoTwitter
         },
         {
             label: "calendly",
