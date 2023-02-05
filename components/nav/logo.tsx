@@ -1,7 +1,7 @@
-import Link from 'next/link'
-import { Text, useColorModeValue } from '@chakra-ui/react'
-import styled from '@emotion/styled'
-import Image from '../ui/image'
+import Link from "next/link"
+import { Text, useColorModeValue } from "@chakra-ui/react"
+import styled from "@emotion/styled"
+import Image from "../ui/image"
 
 const LogoBox = styled.span`
     font-weight: bold;
@@ -26,7 +26,7 @@ interface LogoProps {
 
 
 const Logo = ({ text, logo }: LogoProps) => {
-    const squareSize = '20px'
+    const squareSize = "20px"
 
     return (
         <Link href="/" scroll={false}>
@@ -40,7 +40,7 @@ const Logo = ({ text, logo }: LogoProps) => {
                     alt="logo"
                 />
                 <Text
-                    color={useColorModeValue('gray.800', 'whiteAlpha.900')}
+                    color={useColorModeValue("gray.800", "whiteAlpha.900")}
                     fontFamily='M PLUS Rounded 1c", sans-serif'
                     fontWeight="bold"
                     ml={3}

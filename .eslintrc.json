@@ -2,6 +2,10 @@
   "root": true,
   "extends": "next",
   "rules": {
+    "quotes": [
+      "error",
+      "double"
+    ],
     "no-unused-vars": [
       "error",
       {

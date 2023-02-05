@@ -1,4 +1,4 @@
-import { Image as ChakraImage, ImageProps } from '@chakra-ui/react'
+import { Image as ChakraImage, ImageProps } from "@chakra-ui/react"
 
 
 const Image = (props: ImageProps) => {

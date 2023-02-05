@@ -1,4 +1,4 @@
-import NextLink from 'next/link'
+import NextLink from "next/link"
 import {
     Box,
     Heading,
@@ -6,7 +6,7 @@ import {
     Container,
     Divider,
     Button
-} from '@chakra-ui/react'
+} from "@chakra-ui/react"
 
 const NotFound = () => {
     return (
