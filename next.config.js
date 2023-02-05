@@ -48,6 +48,7 @@ const securityHeaders = [
 
 /** @type {import('next').NextConfig} */
 module.exports = withBundleAnalyzer({
+  reactStrictMode: true,
   swcMinify: true,
   images: {
     unoptimized: true
