@@ -21,7 +21,7 @@ const SocialView = dynamic(
 const Home = () => {
   const [{ personal, socials }] = useState(ME_PROFILE)
 
-  return <RootLayout logo={personal.avatar}>
+  return <RootLayout logo={personal.irlAvatar}>
     <Container pt={120}>
 
       <BioHeader personal={personal} />
