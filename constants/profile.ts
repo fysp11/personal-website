@@ -1,5 +1,5 @@
 import { IconType } from "react-icons";
-import { IoLogoGithub, IoLogoTwitter, IoLogoHtml5 } from "react-icons/io5"
+import { IoLogoGithub, IoLogoTwitter } from "react-icons/io5"
 import { FaCalendarPlus, FaEthereum } from "react-icons/fa"
 
 import { AVATAR_JPG } from "./assets";
