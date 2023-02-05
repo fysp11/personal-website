@@ -1,15 +1,15 @@
 import { Box, chakra, Heading } from "@chakra-ui/react";
-import Image from '../ui/image'
+import Image from "../ui/image"
 
 import { PersonalProps } from "../../constants/profile";
 
 const ProfileImage = chakra(Image, {
-    shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
+    shouldForwardProp: prop => ["width", "height", "src", "alt"].includes(prop)
 })
 
 export default function BioHeader({ personal }: { personal: PersonalProps }) {
-    const squareSize = '96px'
-    return <Box display={{ md: 'flex' }}>
+    const squareSize = "96px"
+    return <Box display={{ md: "flex" }}>
         <Box flexGrow={1}>
             <Heading as="h2" variant="page-title">
                 {personal.name}
@@ -33,7 +33,7 @@ export default function BioHeader({ personal }: { personal: PersonalProps }) {
                 overflow="hidden"
             >
                 <ProfileImage
-                    src={personal.irlAvatar}
+                    src={personal.avatar}
                     alt="Profile image"
                     borderRadius="full"
                     width={squareSize}

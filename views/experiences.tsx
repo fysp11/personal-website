@@ -1,7 +1,7 @@
 import { Heading } from "@chakra-ui/react"
 import { Experience } from "../constants/experiences"
 
-import { BioSection, BioYear } from '../components/bio/bio-section'
+import { BioSection, BioYear } from "../components/bio/bio-section"
 import React from "react"
 import { getSorter } from "../lib/_helpers"
 
@@ -10,7 +10,7 @@ interface ExperiencesProps {
 }
 
 const Experiences = ({ experiences }: ExperiencesProps) => {
-    experiences.sort(getSorter('year'))
+    experiences.sort(getSorter("year"))
     return <>
         <Heading as="h3" variant="section-title">
             {"Stuff I've done"}

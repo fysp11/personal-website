@@ -1,8 +1,8 @@
-import { IconType } from 'react-icons';
-import { IoLogoGithub, IoLogoTwitter, IoLogoHtml5 } from 'react-icons/io5'
-import { FaCalendarPlus, FaEthereum } from 'react-icons/fa'
+import { IconType } from "react-icons";
+import { IoLogoGithub, IoLogoTwitter, IoLogoHtml5 } from "react-icons/io5"
+import { FaCalendarPlus, FaEthereum } from "react-icons/fa"
 
-import { AVATAR_PNG, IRL_AVATAR_JPEG } from "./assets";
+import { AVATAR_JPG, IRL_AVATAR_JPEG } from "./assets";
 
 
 export interface PersonalProps {
@@ -30,9 +30,9 @@ export interface ProfileProps {
 
 export const ME_PROFILE: ProfileProps = {
     personal: {
-        name: 'Felipe Mendonça',
-        subtitle: 'climate/social focused, tech enthusiast',
-        avatar: AVATAR_PNG,
+        name: "Felipe Mendonça",
+        subtitle: "climate/social focused, tech enthusiast",
+        avatar: AVATAR_JPG,
         irlAvatar: IRL_AVATAR_JPEG,
         bio: [
             `I'm currently a software developer with a background in clinical psychology moving towards
@@ -43,28 +43,28 @@ export const ME_PROFILE: ProfileProps = {
     },
     socials: [
         {
-            label: 'twitter',
-            url: 'https://twitter.com/fysp',
+            label: "twitter",
+            url: "https://twitter.com/fysp",
             icon: IoLogoTwitter
         },
         {
-            label: 'github',
-            url: 'https://github.com/fysp11',
+            label: "github",
+            url: "https://github.com/fysp11",
             icon: IoLogoGithub
         },
         {
-            label: 'website',
-            url: 'https://fysp.eth.limo',
+            label: "website",
+            url: "https://fysp.eth.limo",
             icon: IoLogoHtml5
         },
         {
-            label: 'poap',
-            url: 'https://app.poap.xyz/scan/fysp.eth',
+            label: "poap",
+            url: "https://app.poap.xyz/scan/fysp.eth",
             icon: FaEthereum
         },
         {
-            label: 'calendly',
-            url: 'https://calendly.com/fysp',
+            label: "calendly",
+            url: "https://calendly.com/fysp",
             icon: FaCalendarPlus
         },
     ],

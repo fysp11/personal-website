@@ -1,10 +1,10 @@
-import { extendTheme } from '@chakra-ui/react'
-import { mode } from '@chakra-ui/theme-tools'
+import { extendTheme } from "@chakra-ui/react"
+import { mode } from "@chakra-ui/theme-tools"
 
 const styles = {
     global: (props: any) => ({
         body: {
-            bg: mode('#f0e7db', '#202023')(props)
+            bg: mode("#f0e7db", "#202023")(props)
         }
     })
 }
@@ -12,11 +12,11 @@ const styles = {
 const components = {
     Heading: {
         variants: {
-            'section-title': {
-                textDecoration: 'underline',
+            "section-title": {
+                textDecoration: "underline",
                 fontSize: 20,
                 textUnderlineOffset: 6,
-                textDecorationColor: '#525252',
+                textDecorationColor: "#525252",
                 textDecorationThickness: 4,
                 marginTop: 3,
                 marginBottom: 4
@@ -25,13 +25,13 @@ const components = {
     },
     Link: {
         baseStyle: (props: any) => ({
-            color: mode('#3d7aed', '#ff63c3')(props),
+            color: mode("#3d7aed", "#ff63c3")(props),
             textUnderlineOffset: 3
         })
     }
 }
 const colors = {
-    grassTeal: '#88ccca'
+    grassTeal: "#88ccca"
 }
 
 const fonts = {
@@ -39,7 +39,7 @@ const fonts = {
 }
 
 const config = {
-    initialColorMode: 'dark',
+    initialColorMode: "dark",
     useSystemColorMode: true,
 }
 

@@ -1,8 +1,8 @@
-import Link from 'next/link'
-import Image from './image'
-import { Text, Stack } from '@chakra-ui/react'
-import { Global } from '@emotion/react'
-import { PropsWithChildren } from 'react'
+import Link from "next/link"
+import Image from "./image"
+import { Text, Stack } from "@chakra-ui/react"
+import { Global } from "@emotion/react"
+import { PropsWithChildren } from "react"
 
 interface BaseGridItemProps {
     title: string,

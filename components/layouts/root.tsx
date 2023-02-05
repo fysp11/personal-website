@@ -1,14 +1,14 @@
-import Head from 'next/head'
-import { PropsWithChildren } from 'react'
-import { GridItemStyle } from '../ui/grid-item'
-import NavBar from '../nav/navbar'
+import Head from "next/head"
+import { PropsWithChildren } from "react"
+import { GridItemStyle } from "../ui/grid-item"
+import NavBar from "../nav/navbar"
 
 interface LayoutProps {
     title?: string
     logo: string
 }
 
-const RootLayout = ({ children, logo, title = '' }: PropsWithChildren<LayoutProps>) => {
+const RootLayout = ({ children, logo, title = "" }: PropsWithChildren<LayoutProps>) => {
     const fullTitle = `${title} - fysp`
     return (
         <>
