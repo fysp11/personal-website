@@ -2,14 +2,13 @@ import { IconType } from "react-icons";
 import { IoLogoGithub, IoLogoTwitter, IoLogoHtml5 } from "react-icons/io5"
 import { FaCalendarPlus, FaEthereum } from "react-icons/fa"
 
-import { AVATAR_JPG, IRL_AVATAR_JPEG } from "./assets";
+import { AVATAR_JPG } from "./assets";
 
 
 export interface PersonalProps {
     name: string;
     subtitle: string;
     avatar: string;
-    irlAvatar: string;
     bio: string[];
     tags: string[];
 }
@@ -33,7 +32,6 @@ export const ME_PROFILE: ProfileProps = {
         name: "Felipe Mendonça",
         subtitle: "climate/social focused, tech enthusiast",
         avatar: AVATAR_JPG,
-        irlAvatar: IRL_AVATAR_JPEG,
         bio: [
             `I'm currently a software developer with a background in clinical psychology moving towards
             regenerative ventures (climate and public goods). In my free time, I like to hike, play basketball,

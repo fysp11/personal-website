@@ -2,13 +2,10 @@ import {
     Container,
     Box,
     Stack,
-    Heading,
     Flex,
     useColorModeValue,
-    useColorMode
 } from "@chakra-ui/react"
 import { useEffect, useState } from "react"
-import { ConnectWallet } from "@thirdweb-dev/react";
 
 
 import ThemeToggleButton from "./theme-toggle-button"
@@ -20,7 +17,6 @@ interface NavbarProps {
 }
 
 const Navbar = ({ logo }: NavbarProps) => {
-    const { colorMode } = useColorMode()
     const [pageYOffset, setPageYOffset] = useState(0)
 
     const handleScroll = () => {
@@ -54,9 +50,16 @@ const Navbar = ({ logo }: NavbarProps) => {
                 flexWrap={"wrap"}
             >
                 <Flex align="center" mr={5} flexGrow="revert">
-                    <Heading as="h1" size="lg" letterSpacing={"tighter"} opacity={pageYOffset > 47 ? 1 : 0}>
-                        <Image src={logo} alt="logo" width={50} height={50} />
-                    </Heading>
+                    <Image
+                        src={logo}
+                        alt="logo"
+                        width={50}
+                        height={50}
+                        style={{
+                            opacity: pageYOffset > 47 ? 1 : 0,
+                            borderRadius: 50, borderColor: "white", borderWidth: 1, borderStyle: "solid"
+                        }}
+                    />
                 </Flex>
 
                 <Stack
@@ -67,7 +70,6 @@ const Navbar = ({ logo }: NavbarProps) => {
                     flexGrow={1}
                     mt={{ base: 4, md: 0 }}
                 >
-                    <ConnectWallet colorMode={colorMode} />
 
                 </Stack>
 
