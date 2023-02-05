@@ -56,8 +56,8 @@ export const ME_PROFILE: ProfileProps = {
             icon: IoLogoTwitter
         },
         {
-            label: "calendly",
-            url: "https://calendly.com/fysp",
+            label: "contact",
+            url: "https://app.reclaim.ai/m/fysp",
             icon: FaCalendarPlus
         },
     ],
