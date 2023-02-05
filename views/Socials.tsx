@@ -1,4 +1,4 @@
-import { Button, Icon, Link, List, ListItem } from "@chakra-ui/react";
+import { Button, SimpleGrid, Icon, Link } from "@chakra-ui/react";
 import type { SocialItem } from "../constants/profile"
 
 
@@ -7,23 +7,27 @@ interface SocialViewProps {
 }
 const SocialView = ({ socials }: SocialViewProps) => {
     return <>
-        <List>
+        <SimpleGrid columns={2}>
             {socials
                 .map((socialItem) => (
-                    <ListItem key={socialItem.label}>
-                        <Link href={socialItem.url} target="_blank">
-                            <Button
-                                variant="ghost"
-                                colorScheme="teal"
-                                outline="none"
-                                leftIcon={<Icon as={socialItem.icon} />}
-                            >
-                                {socialItem.label}
-                            </Button>
-                        </Link>
-                    </ListItem>
+                    <Link
+                        key={socialItem.label}
+                        href={socialItem.url}
+                        style={{ display: "flex", justifyContent: "center" }}
+                        target="_blank">
+                        <Button
+                            variant="ghost"
+                            colorScheme="teal"
+                            outline="none"
+                            leftIcon={<Icon as={socialItem.icon} />}
+                            display="flex"
+                            justifyItems={{ base: "center", md: "flex-start" }}
+                        >
+                            {socialItem.label}
+                        </Button>
+                    </Link>
                 ))}
-        </List>
+        </SimpleGrid>
     </>
 }
 

@@ -1,5 +1,5 @@
 import { IconType } from "react-icons";
-import { IoLogoGithub, IoLogoTwitter, IoLogoHtml5 } from "react-icons/io5"
+import { IoLogoGithub, IoLogoTwitter } from "react-icons/io5"
 import { FaCalendarPlus, FaEthereum } from "react-icons/fa"
 
 import { AVATAR_JPG } from "./assets";
@@ -41,24 +41,19 @@ export const ME_PROFILE: ProfileProps = {
     },
     socials: [
         {
-            label: "twitter",
-            url: "https://twitter.com/fysp",
-            icon: IoLogoTwitter
-        },
-        {
             label: "github",
             url: "https://github.com/fysp11",
             icon: IoLogoGithub
         },
         {
-            label: "website",
-            url: "https://fysp.eth.limo",
-            icon: IoLogoHtml5
-        },
-        {
             label: "poap",
             url: "https://app.poap.xyz/scan/fysp.eth",
             icon: FaEthereum
+        },
+        {
+            label: "twitter",
+            url: "https://twitter.com/fysp",
+            icon: IoLogoTwitter
         },
         {
             label: "calendly",
