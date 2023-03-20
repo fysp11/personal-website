@@ -1,6 +1,6 @@
 import { IconType } from "react-icons";
 import { IoLogoGithub, IoLogoTwitter } from "react-icons/io5"
-import { FaCalendarPlus, FaEthereum } from "react-icons/fa"
+import { FaCalendarPlus, FaEthereum, FaEnvelope } from "react-icons/fa"
 
 import { AVATAR_JPG } from "./assets";
 
@@ -60,5 +60,10 @@ export const ME_PROFILE: ProfileProps = {
             url: "https://app.reclaim.ai/m/fysp",
             icon: FaCalendarPlus
         },
+        {
+            label: "email",
+            url: "mailto:contact@fysp.dev",
+            icon: FaEnvelope
+        }
     ],
 }
