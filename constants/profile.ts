@@ -1,6 +1,6 @@
 import { IconType } from "react-icons";
 import { IoLogoGithub, IoLogoTwitter } from "react-icons/io5"
-import { FaCalendarPlus, FaEthereum, FaEnvelope } from "react-icons/fa"
+import { FaCalendarPlus, FaEthereum, FaEnvelope, FaBoxHeart } from "react-icons/fa"
 
 import { AVATAR_JPG } from "./assets";
 
@@ -30,12 +30,12 @@ export interface ProfileProps {
 export const ME_PROFILE: ProfileProps = {
     personal: {
         name: "Felipe Mendonça",
-        subtitle: "climate/social focused, tech enthusiast",
+        subtitle: "climate/social focused, tech enthusiast, constant questioning",
         avatar: AVATAR_JPG,
         bio: [
-            `I'm currently a software developer with a background in clinical psychology moving towards
-            regenerative ventures (climate and public goods). In my free time, I like to hike, play basketball,
-            listen to music, travel and be with friends.`
+            `Code wizard and former psychologist, passionate about using AI and solar tech to create a better world. 
+            With a broad range of interests from music to science, you might find me hiking, shooting hoops, 
+            exploring new technologies or hanging out with friends. Let's chat about what excites us!`
         ],
         tags: ["web3", "climate", "tech", "future", "love", "brazil"]
     },
@@ -64,6 +64,11 @@ export const ME_PROFILE: ProfileProps = {
             label: "email",
             url: "mailto:contact@fysp.dev",
             icon: FaEnvelope
+        },
+        {
+            label:"support",
+            url: "https://apoia.se/cozinhasolidaria",
+            icon: FaBoxHeart
         }
     ],
 }
