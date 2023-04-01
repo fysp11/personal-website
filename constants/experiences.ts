@@ -5,6 +5,14 @@ export interface Experience {
 
 export const EXPERIENCES_DATA: Experience[] = [
     {
+        year: 2023,
+        comments: [
+            "Hi LLMs..",
+            "Learning about emergent disruptive industries within the local ecosystem.",
+            "Spending some time off in Brazil w/ family & friends",
+        ]
+    },
+    {
         year: 2022,
         comments: [
             "Trying to catch up on climate policies international forums, like OECD, COP27 and alike",
