@@ -1,6 +1,7 @@
 import { IconType } from "react-icons";
 import { IoLogoGithub, IoLogoTwitter } from "react-icons/io5"
-import { FaCalendarPlus, FaEthereum, FaEnvelope, FaBoxHeart } from "react-icons/fa"
+import { FaCalendarPlus, FaEthereum, FaEnvelope } from "react-icons/fa"
+import { BiDonateHeart } from "react-icons/bi"
 
 import { AVATAR_JPG } from "./assets";
 
@@ -68,7 +69,7 @@ export const ME_PROFILE: ProfileProps = {
         {
             label:"support",
             url: "https://apoia.se/cozinhasolidaria",
-            icon: FaBoxHeart
+            icon: BiDonateHeart
         }
     ],
 }
