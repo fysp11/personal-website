@@ -1,6 +1,6 @@
 import { IconType } from "react-icons";
 import { IoLogoGithub, IoLogoTwitter } from "react-icons/io5"
-import { FaCalendarPlus, FaEthereum, FaEnvelope } from "react-icons/fa"
+import { FaCalendarPlus, FaEthereum, FaEnvelope, FaDollarSign } from "react-icons/fa"
 import { BiDonateHeart } from "react-icons/bi"
 
 import { AVATAR_JPG } from "./assets";
@@ -57,6 +57,11 @@ export const ME_PROFILE: ProfileProps = {
             icon: IoLogoTwitter
         },
         {
+            label: "schedule",
+            url: "https://schedule.fysp.dev",
+            icon: FaDollarSign
+        },
+        {
             label: "contact",
             url: "https://app.reclaim.ai/m/fysp",
             icon: FaCalendarPlus
@@ -67,7 +72,7 @@ export const ME_PROFILE: ProfileProps = {
             icon: FaEnvelope
         },
         {
-            label:"support",
+            label: "support",
             url: "https://apoia.se/cozinhasolidaria",
             icon: BiDonateHeart
         }
