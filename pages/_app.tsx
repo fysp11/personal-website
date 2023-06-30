@@ -1,4 +1,5 @@
 import type { AppProps } from "next/app"
+import { GoogleAnalytics } from "nextjs-google-analytics";
 
 import "../styles/globals.css"
 import Fonts from "../lib/wrappers/fonts"
@@ -12,6 +13,11 @@ function Website({ Component, pageProps, router }: AppProps) {
             <ChakraWrapper>
                 <Component {...pageProps} key={router.route} />
             </ChakraWrapper>
+            <GoogleAnalytics
+                strategy="lazyOnload"
+                debugMode={true}
+                trackPageViews
+            />
         </>
     )
 }
