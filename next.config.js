@@ -6,7 +6,7 @@ const ContentSecurityPolicy = `
   default-src * data:;
   style-src 'self' 'unsafe-inline';
   style-src-elem 'self' https://fonts.googleapis.com/ 'unsafe-inline';
-  script-src 'self' 'unsafe-inline' 'unsafe-eval' https://vitals.vercel-insights.com/ https://www.googletagmanager.com/;
+  script-src 'self' 'unsafe-inline' 'unsafe-eval' https://vitals.vercel-insights.com/ https://www.googletagmanager.com/ https://www.google-analytics.com/;
   font-src 'self' https://fonts.gstatic.com/ 'unsafe-inline';
   object-src 'none';
 `
