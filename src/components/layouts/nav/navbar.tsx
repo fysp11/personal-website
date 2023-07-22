@@ -26,7 +26,7 @@ export default function Navbar() {
   const navClass = cn(
     "sticky top-0 z-10",
     "flex flex-row justify-between",
-    "px-[.5vw] py-1 sm:px-[2vw]",
+    "px-[.5vw] py-3 sm:px-[2vw]",
     { "backdrop-blur-md": !enableTopBar }
   )
 
@@ -35,7 +35,7 @@ export default function Navbar() {
   })
 
   return (
-    <div className={navClass}>
+    <nav className={navClass}>
       <Image
         src={logo}
         alt="Profile Image"
@@ -45,6 +45,6 @@ export default function Navbar() {
         priority
       />
       <ThemeToggleButton />
-    </div>
+    </nav>
   )
 }

@@ -12,16 +12,16 @@ export default function Experiences({ experiences }: ExperiencesProps) {
   experiences.sort(getSorter("year"))
   return (
     <div>
-      <SectionTitle>
-        <h3>Stuff I&apos;ve done</h3>
-      </SectionTitle>
+      <SectionTitle>Stuff I&apos;ve done</SectionTitle>
       {experiences.map((experience) => (
-        <BioSection key={experience.year}>
-          <BioYear>{experience.year}</BioYear>
-          {experience.comments.map((comment) => (
-            <span key={comment}>{comment}.</span>
-          ))}
-        </BioSection>
+        <div key={experience.year} className={"my-5 flex flex-row"}>
+          <div className="mr-5 font-bold">{experience.year}</div>
+          <div className="contrast-75 hover:contrast-100">
+            {experience.comments.map((comment) => (
+              <span key={comment}>{comment}.</span>
+            ))}
+          </div>
+        </div>
       ))}
     </div>
   )
