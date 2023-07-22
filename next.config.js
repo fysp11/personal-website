@@ -50,11 +50,14 @@ const securityHeaders = [
 const nextConfig = {
   swcMinify: true,
   reactStrictMode: true,
-  // output: "standalone",
-  // output: "export",
-  // distDir: "dist",
-  images: {},
+  output: "standalone", // For Vercel deployment
+  // output: "export", // for Fleek.co deployment
+  // distDir: "dist", // for Fleek.co deployment
+  images: {
+    // unoptimized: true // for Fleek.co deployment
+  },
   async headers() {
+    // For Vercel deployment
     return [
       {
         source: "/:path*",
