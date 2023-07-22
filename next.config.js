@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // output: "standalone",
+  output: "export",
+  distDir: "dist",
   images: {
     domains: ["localhost"],
     remotePatterns: [
@@ -11,9 +13,6 @@ const nextConfig = {
         pathname: "/**"
       }
     ]
-  },
-  experimental: {
-    serverActions: true
   }
 }
 
