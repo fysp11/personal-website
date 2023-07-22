@@ -1,0 +1,9 @@
+{
+  "build": {
+    "image": "node:18-alpine",
+    "command": "npm install -g pnpm && pnpm install && npm run build",
+    "publicDir": "dist",
+    "baseDir": "./",
+    "environment": {}
+  }
+}
