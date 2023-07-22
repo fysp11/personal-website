@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "@semantic-release/changelog": "^6.0.3",
-    "@sentry/nextjs": "^7.60.0",
     "@vercel/kv": "^0.2.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
@@ -31,7 +30,6 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
-    "@eclass/semantic-release-sentry-releases": "^3.0.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.1.0",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^9.0.4",

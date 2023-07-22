@@ -1,9 +1,7 @@
 import { Experience } from "@/constants/types"
 
-import { getSorter } from "@/lib/_helpers"
-import BioSection from "@/components/ui/Section"
+import { getSorter } from "@/lib/utils"
 import SectionTitle from "@/components/ui/SectionTitle"
-import BioYear from "@/components/bio/Year"
 
 interface ExperiencesProps {
   experiences: Experience[]
