@@ -1,5 +1,5 @@
 import Image from "next/image"
-import logo from "@/assets/img/fysp_aigen1.jpg"
+import { AVATAR_URL } from "@/constants/assets"
 
 import { cn } from "@/lib/utils"
 
@@ -29,11 +29,7 @@ export default function BioHeader({ name, subtitle }: BioHeaderProps) {
     "rounded-full",
     "overflow-hidden"
   )
-  // const imageClass = cn(
-  //   "rounded-full"
-  //   // `w-${squareSize} max-w-${squareSize}`,
-  //   // `h-${squareSize} max-h-${squareSize}`
-  // )
+  const imageClass = cn("rounded-full")
 
   return (
     <div className={boxClasses}>
@@ -44,9 +40,9 @@ export default function BioHeader({ name, subtitle }: BioHeaderProps) {
       <div className={imgContainerClasses}>
         <div className={imgBorderClasses}>
           <Image
-            src={logo}
+            src={AVATAR_URL}
             alt="Profile image"
-            // className={imageClass}
+            className={imageClass}
             width={squareSize}
             height={squareSize}
           />

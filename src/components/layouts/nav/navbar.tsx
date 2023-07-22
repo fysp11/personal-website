@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import Image from "next/image"
-import logo from "@/assets/img/fysp_aigen1.jpg"
+import { AVATAR_URL } from "@/constants/assets"
 
 import { cn } from "@/lib/utils"
 import ThemeToggleButton from "@/components/ui/ThemeToggleButton"
@@ -37,7 +37,7 @@ export default function Navbar() {
   return (
     <nav className={navClass}>
       <Image
-        src={logo}
+        src={AVATAR_URL}
         alt="Profile Image"
         width={50}
         height={50}
