@@ -10,9 +10,9 @@ export default function SocialView({ socials }: SocialViewProps) {
   const buttonClass = cn(
     "flex items-center justify-start",
     "hover:underline",
-    "dark:text-teal-200 text-teal-800",
-    "hover:dark:bg-sky-800 hover:bg-sky-100",
-    "px-2 py-1 rounded"
+    "text-teal-800 dark:text-teal-200",
+    "hover:bg-sky-200 hover:dark:bg-sky-800",
+    "rounded px-2 py-1"
   )
 
   return (
@@ -26,9 +26,8 @@ export default function SocialView({ socials }: SocialViewProps) {
             target="_blank"
           >
             <button className={buttonClass}>
-              {/* <i className="fas fa-user mr-2"></i> */}
               <socialItem.icon className="mr-2 min-w-[10px]" />
-              <span className="text-center w-full">Button Text</span>
+              <span className="w-full text-center">{socialItem.label}</span>
             </button>
             {/* <button className="flex md:justify-start justify-center font-[600] hover:underline hover:bg-teal-300 text-teal-500 px-2 py-1">
               {<socialItem.icon />}

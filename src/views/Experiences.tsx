@@ -13,16 +13,13 @@ export default function Experiences({ experiences }: ExperiencesProps) {
   return (
     <div>
       <SectionTitle>
-        <h3>"Stuff I've done"</h3>
+        <h3>Stuff I&apos;ve done</h3>
       </SectionTitle>
-      {experiences.map((experience, index) => (
-        <BioSection key={index}>
+      {experiences.map((experience) => (
+        <BioSection key={experience.year}>
           <BioYear>{experience.year}</BioYear>
           {experience.comments.map((comment) => (
-            <>
-              <span className="hover-underline-animation">{comment}.</span>
-              {<br />}
-            </>
+            <span key={comment}>{comment}.</span>
           ))}
         </BioSection>
       ))}

@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils"
 
 export default function Footer() {
   const position = cn("flex items-center justify-center")
-  const space = cn("py-3 px-5 text-center min-h-[50px]")
+  const space = cn("min-h-[50px] px-5 py-3 text-center")
   const fullClass = cn(position, space)
 
   return <div className={fullClass}>fysp.eth</div>

@@ -18,7 +18,7 @@ export default function ThemeToggleButton() {
   const bg = cn("bg-gray-800 dark:bg-gray-50")
   const hover = cn("hover:bg-gray-600 dark:hover:bg-gray-300")
   const transition = cn("transition-all duration-100")
-  const textClass = cn("text-white dark:text-gray-800 text-4xl")
+  const textClass = cn("text-4xl text-white dark:text-gray-800")
   const padding = cn("p-2")
   const others = cn("rounded-2xl")
 

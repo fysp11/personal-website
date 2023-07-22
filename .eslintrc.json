@@ -6,10 +6,8 @@
     "prettier",
     "plugin:tailwindcss/recommended"
   ],
-  "plugins": ["tailwindcss", "./helper"],
+  "plugins": ["tailwindcss"],
   "rules": {
-    "helper/server-only": ["error", ["./src/server/"]],
-    "helper/use-client": ["error", ["/src/client/"]],
     "@next/next/no-html-link-for-pages": "off",
     "react/jsx-key": "off",
     "tailwindcss/no-custom-classname": "off",

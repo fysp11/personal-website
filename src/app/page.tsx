@@ -7,15 +7,16 @@ import { cn } from "@/lib/utils"
 
 export const metadata = {
   title: "Fysp.Dev",
-  description: `Tech savy and creative Software Engineer. \
-  Tell me some interesting things :)`
+  description:
+    "Tech savy and creative Software Engineer. \
+  Tell me some interesting things :)"
 }
 
 export default async function Page() {
   const { socials, personal } = await getProfile()
   const experiences = await getExperiences()
 
-  const baseClass = cn("flex flex-col w-full gap-11 sm:px-6 lg:px-8 py-11")
+  const baseClass = cn("flex w-full flex-col gap-11 py-11 sm:px-6 lg:px-8")
 
   return (
     <div className={baseClass}>

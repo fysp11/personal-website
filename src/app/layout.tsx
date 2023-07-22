@@ -28,7 +28,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
       </Head>
       <body>
         <Providers>
-          <div className="flex-col">
+          <div className="mx-auto max-w-3xl flex-col">
             <NavBar />
             <Container>{children}</Container>
             <Footer />

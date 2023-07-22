@@ -11,10 +11,10 @@ export default function BioHeader({ name, subtitle }: BioHeaderProps) {
   const squareSize = 96
 
   const boxClasses = cn("md:flex")
-  const flexGrowClasses = cn("flex-grow")
+  const flexGrowClasses = cn("grow")
   const headingClasses = cn("text-2xl") // Adjust to match your 'page-title' variant
   const imgContainerClasses = cn(
-    "flex-shrink-0",
+    "shrink-0",
     "mt-4",
     "md:mt-0",
     "md:ml-6",

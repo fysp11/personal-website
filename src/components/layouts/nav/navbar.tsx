@@ -10,7 +10,6 @@ export default function Navbar() {
 
   const handleScroll = () => {
     const position = window.scrollY
-    console.log(position)
     setPageYOffset(position)
   }
 
@@ -27,7 +26,7 @@ export default function Navbar() {
   const navClass = cn(
     "sticky top-0 z-10",
     "flex flex-row justify-between",
-    "px-[.5vw] sm:px-[2vw] md:px-[12vw] py-1",
+    "px-[.5vw] py-1 sm:px-[2vw]",
     { "backdrop-blur-md": !enableTopBar }
   )
 

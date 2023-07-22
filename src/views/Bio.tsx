@@ -10,9 +10,9 @@ interface BioProps {
 }
 export default function Bio({ personal }: BioProps) {
   return (
-    <>
+    <div>
       <BioHeader {...personal} />
       <BioContent contents={personal.bio} />
-    </>
+    </div>
   )
 }
