@@ -1,7 +1,6 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 .env
-prisma/migrations
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -39,7 +38,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .env
-prisma/*.db
 .husky/*
 !.husky/pre-commit
 
