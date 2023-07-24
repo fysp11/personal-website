@@ -12,8 +12,8 @@ export default function Experiences({ experiences }: ExperiencesProps) {
     <div>
       <SectionTitle>Stuff I&apos;ve done</SectionTitle>
       {experiences.map((experience) => (
-        <div key={experience.year} className={"my-5 flex flex-row"}>
-          <div className="mr-5 font-bold">{experience.year}</div>
+        <div key={experience.year} className={"my-[2vh] flex flex-row"}>
+          <div className="mr-[2vw] font-bold">{experience.year}</div>
           <div className="contrast-75 hover:contrast-100">
             {experience.comments.map((comment) => (
               <span key={comment}>{comment}.</span>

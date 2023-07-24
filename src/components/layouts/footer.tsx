@@ -5,5 +5,5 @@ export default function Footer() {
   const space = cn("min-h-[80px] px-5 py-3 text-center")
   const fullClass = cn("hover:underline", position, space)
 
-  return <div className={fullClass}>fysp.eth</div>
+  return <footer className={fullClass}>fysp.eth</footer>
 }

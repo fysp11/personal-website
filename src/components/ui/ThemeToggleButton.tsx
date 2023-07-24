@@ -1,5 +1,5 @@
 import { useTheme } from "next-themes"
-import { BiSolidMoon, BiSolidSun } from "react-icons/bi"
+import { FaMoon, FaSun } from "react-icons/fa"
 
 import { cn } from "@/lib/utils"
 
@@ -30,7 +30,7 @@ export default function ThemeToggleButton() {
       onClick={toggleTheme}
       className={buttonClass}
     >
-      {theme == "dark" ? <BiSolidMoon /> : <BiSolidSun />}
+      {isDark ? <FaMoon /> : <FaSun />}
     </button>
   )
 }

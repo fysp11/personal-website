@@ -1,15 +1,11 @@
-"use client"
-
 import { M_PLUS_Rounded_1c } from "next/font/google"
 import Head from "next/head"
-import { GoogleAnalytics } from "nextjs-google-analytics"
 
 import NavBar from "@/components/layouts/nav/navbar"
 
 import "@/styles/globals.css"
 
 import type { PropsWithChildren } from "react"
-import Script from "next/script"
 
 import Container from "@/components/ui/Container"
 import Footer from "@/components/layouts/footer"
@@ -29,25 +25,12 @@ export default function RootLayout({ children }: PropsWithChildren) {
       </Head>
       <body>
         <Providers>
-          <div className="mx-auto max-w-3xl flex-col">
+          <Container className="mx-[1.5vw] my-[1vh] sm:m-auto">
             <NavBar />
-            <Container>{children}</Container>
+            {children}
             <Footer />
-          </div>
+          </Container>
         </Providers>
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
-        />
-        <Script id="google-analytics">
-          {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
-        `}
-        </Script>
-        <GoogleAnalytics debugMode={true} trackPageViews />
       </body>
     </html>
   )
