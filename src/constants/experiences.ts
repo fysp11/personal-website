@@ -4,8 +4,10 @@ export const EXPERIENCES_DATA: Experience[] = [
   {
     year: 2023,
     comments: [
-      "Hi LLMs..",
-      "Learning about emergent disruptive industries within the local ecosystem.",
+      "Back to Amsterdam, working in AI powered content moderation",
+      "Meaningful interest with everything Healthtech industry",
+      "Diving into the Large Language Models space",
+      "Learning about emergent disruptive industries within the brazilian ecosystem",
       "Spending some time off in Brazil w/ family & friends"
     ]
   },
