@@ -25,11 +25,11 @@ export default function RootLayout({ children }: PropsWithChildren) {
       </Head>
       <body>
         <Providers>
+          <NavBar />
           <Container className="mx-[1.5vw] my-[1vh] sm:m-auto">
-            <NavBar />
             {children}
-            <Footer />
           </Container>
+          <Footer />
         </Providers>
       </body>
     </html>

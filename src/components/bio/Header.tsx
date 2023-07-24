@@ -10,7 +10,7 @@ interface BioHeaderProps {
 export default function BioHeader({ name, subtitle }: BioHeaderProps) {
   const squareSize = 96
 
-  const boxClasses = cn("flex justify-between")
+  const boxClasses = cn("flex justify-between gap-[3vw]")
   const flexGrowClasses = cn("shrink-1")
   const headingClasses = cn("text-2xl") // Adjust to match your 'page-title' variant
   const imgContainerClasses = cn(
