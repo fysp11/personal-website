@@ -4,9 +4,9 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 
 const ContentSecurityPolicy = `
   default-src * data:;
-  style-src 'self' https://js-eu1.hs-scripts.com/ 'unsafe-inline';
+  style-src 'self' 'unsafe-inline';
   style-src-elem 'self' https://fonts.googleapis.com/ 'unsafe-inline';
-  script-src 'self' 'unsafe-inline' 'unsafe-eval' https://vitals.vercel-insights.com/ https://www.googletagmanager.com/ https://www.google-analytics.com/;
+  script-src 'self' 'unsafe-inline' 'unsafe-eval' http://js-eu1.hs-scripts.com/ https://js-eu1.hscollectedforms.net/ https://js-eu1.hs-analytics.net/ https://js-eu1.hs-banner.com/v2/ https://js-eu1.usemessages.com/ https://vitals.vercel-insights.com/ https://www.googletagmanager.com/ https://www.google-analytics.com/;
   font-src 'self' https://fonts.gstatic.com/ 'unsafe-inline';
   object-src 'none';
 `
