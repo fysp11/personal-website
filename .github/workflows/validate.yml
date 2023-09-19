@@ -1,0 +1,24 @@
+name: Lint (On Pull Requests)
+
+on:
+  pull_request:
+    branches:
+      - main
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - name: Setup pnpm
+        uses: ./.github/actions/pnpm-setup
+
+      - name: Run Type Check
+        run: pnpm run type-check
+      - name: Run Lint
+        run: pnpm run lint
