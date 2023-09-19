@@ -1,5 +1,4 @@
 import { M_PLUS_Rounded_1c } from "next/font/google"
-import Head from "next/head"
 
 import NavBar from "@/components/layouts/nav/navbar"
 
@@ -20,9 +19,6 @@ const fontFamily = M_PLUS_Rounded_1c({
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en" className={fontFamily.className} suppressHydrationWarning>
-      <Head>
-        <meta name="viewport" content="viewport-fit=cover" />
-      </Head>
       <body>
         <Providers>
           <NavBar />
