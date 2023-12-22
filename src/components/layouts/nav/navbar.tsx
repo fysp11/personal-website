@@ -25,27 +25,30 @@ export default function Navbar() {
     }
   }, [])
 
-  const navClass = cn(
-    "sticky top-0 z-10",
-    "flex flex-row justify-between",
-    "px-[.5vw] py-3 sm:px-[2vw]",
-    { "backdrop-blur-md": !enableTopBar }
-  )
-
-  const imageClasses = cn("rounded-full", {
-    "opacity-0": enableTopBar
-  })
+  const styles = {
+    root: cn(
+      "sticky top-0 z-10",
+      "flex flex-row justify-between",
+      "px-[.5vw] py-3 sm:px-[2vw]",
+      { "backdrop-blur-md": !enableTopBar }
+    ),
+    image: cn("transition-opacity duration-300 ease-in-out", {
+      "opacity-0": enableTopBar
+    })
+  }
 
   return (
-    <nav className={navClass}>
-      <Image
-        src={AVATAR_URL}
-        alt="Profile Image"
-        width={50}
-        height={50}
-        className={imageClasses}
-        priority
-      />
+    <nav className={styles.root}>
+      <div className={styles.image}>
+        <Image
+          src={AVATAR_URL}
+          alt="Profile Image"
+          className="rounded-full"
+          width={50}
+          height={50}
+          priority
+        />
+      </div>
       <ThemeToggleButton />
     </nav>
   )
