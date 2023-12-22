@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "IbrahimCesar.ibrahimcesar-nextjs-developer-pack",
+    "Prisma.prisma",
+    "ms-azuretools.vscode-docker",
+    "EditorConfig.EditorConfig",
+    "usernamehw.errorlens",
+    "GitHub.vscode-pull-request-github",
+    "lokalise.i18n-ally"
+  ]
+}

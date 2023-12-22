@@ -1,18 +1,14 @@
 "use client"
 
+import React from "react"
 import Script from "next/script"
-import { ThemeProvider } from "next-themes"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { GoogleAnalytics } from "nextjs-google-analytics"
-import { QueryClient, QueryClientProvider } from "react-query"
 
-const queryClient = new QueryClient()
-
-export default function Providers({ children }: { children: React.ReactNode }) {
+export default function Analytics() {
   return (
     <>
-      <QueryClientProvider client={queryClient}>
-        <ThemeProvider attribute="class">{children}</ThemeProvider>
-      </QueryClientProvider>
+      <SpeedInsights />
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
       />
@@ -29,7 +25,8 @@ export default function Providers({ children }: { children: React.ReactNode }) {
         type="text/javascript"
         id="hs-script-loader"
         src={process.env.NEXT_PUBLIC_HS_URI}
-        async defer 
+        async
+        defer
       />
       <GoogleAnalytics trackPageViews defaultConsent="denied" />
     </>
