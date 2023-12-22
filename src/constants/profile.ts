@@ -13,9 +13,10 @@ export const ME_PROFILE: ProfileProps = {
     name: "Felipe Mendonça",
     subtitle: "climate/social focused, tech enthusiast, constant questioning",
     bio: [
-      `Code wizard and former psychologist, passionate about using AI and solar tech to create a better world.
-            With a broad range of interests from music to science, you might find me hiking, shooting hoops,
-            exploring new technologies or hanging out with friends. Let's chat about what excites us!`
+      "\
+Code wizard and former psychologist, passionate about using cool tech & strange ideas to imagine a better world. \
+With a broad range of interests from ancestry, AI and the fungi universe, you might find me hiking, \
+shooting hoops, exploring new technologies and hanging out with friends."
     ],
     tags: ["web3", "climate", "tech", "future", "love", "brazil"]
   },
