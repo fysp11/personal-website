@@ -8,7 +8,7 @@ interface BioProps {
 }
 export default function Bio({ personal }: BioProps) {
   return (
-    <div>
+    <div className="flex flex-col gap-5">
       <BioHeader {...personal} />
       <BioContent contents={personal.bio} />
     </div>

@@ -6,5 +6,10 @@
   body {
     @apply dark:bg-gray-800 bg-white;
     @apply dark:text-white text-slate-800;
+
+    .grid > :nth-last-child(-n + 2) {
+      /* Adjust the number based on your items count */
+      flex-grow: 1;
+    }
   }
 }

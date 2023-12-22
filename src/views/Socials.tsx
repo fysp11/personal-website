@@ -7,6 +7,18 @@ interface SocialViewProps {
   socials: SocialItem[]
 }
 export default function SocialView({ socials }: SocialViewProps) {
+  const styles = {
+    root: "grid grid-cols-2 gap-4 justify-items-center justify-content-center",
+    button: cn(
+      "flex items-center justify-start",
+      "text-teal-800 dark:text-teal-200",
+      "hover:bg-sky-200 hover:dark:bg-sky-800",
+      "hover:underline",
+      "rounded px-2 py-1 text-2xl"
+    ),
+    icon: "mr-2 min-w-[10px]",
+    label: "w-full text-center"
+  }
   const buttonClass = cn(
     "flex items-center justify-start",
     "hover:underline",
@@ -17,20 +29,12 @@ export default function SocialView({ socials }: SocialViewProps) {
   )
 
   return (
-    <div className="grid grid-cols-2 gap-4">
-      {socials.map((socialItem, index) => (
-        <Link
-          className={cn("flex justify-center", {
-            "col-span-2":
-              socials.length % 2 !== 0 && index === socials.length - 1
-          })}
-          key={socialItem.label}
-          href={socialItem.url}
-          target="_blank"
-        >
-          <button className={buttonClass}>
-            <socialItem.icon className="mr-2 min-w-[10px]" />
-            <span className="w-full text-center">{socialItem.label}</span>
+    <div className={styles.root}>
+      {socials.map((socialItem) => (
+        <Link key={socialItem.label} href={socialItem.url} target="_blank">
+          <button className={styles.button}>
+            <socialItem.icon className={styles.icon} />
+            <span className={styles.label}>{socialItem.label}</span>
           </button>
         </Link>
       ))}
