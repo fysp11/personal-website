@@ -6,9 +6,8 @@ interface ContainerProps extends PropsWithChildren {
   className?: string
 }
 export default function Container({ children, className }: ContainerProps) {
-  const baseClasses = "mx-auto px-4 sm:px-6 lg:px-8"
-  const mdClass = "md:max-w-3xl"
+  const baseClasses = "mx-auto px-4"
 
-  const containerClass = cn(baseClasses, mdClass, className)
+  const containerClass = cn(baseClasses, className)
   return <main className={containerClass}>{children}</main>
 }

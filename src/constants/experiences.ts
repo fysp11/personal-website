@@ -4,48 +4,40 @@ export const EXPERIENCES_DATA: Experience[] = [
   {
     year: 2023,
     comments: [
-      "Back to Amsterdam, working in AI powered content moderation",
-      "Meaningful interest with everything Healthtech industry",
-      "Diving into the Large Language Models space",
-      "Learning about emergent disruptive industries within the brazilian ecosystem",
-      "Spending some time off in Brazil w/ family & friends"
+      "Tinkering with AI & Extended Reality",
+      "Participated in innovation conferences & future of work"
     ]
   },
   {
     year: 2022,
     comments: [
-      "Trying to catch up on climate policies international forums, like OECD, COP27 and alike",
-      "Started working with planet positive projects within the Climate Tech space",
-      "Participated in multiple tech conferences in Europe, mainly around Regeneration & Blockchain",
-      "Rainforest Day, ETH Barcelona, Sustainable Blockchain summit, Metaverse Summit",
-      "Currently working with web3 companies in the space",
-      "Attended in my first blockchain conferences: Ethereum Rio (won a hackathon) and Amsterdam DevConnect",
-      "Worked remotely in a team of 4 for the 2nd consecutive year"
+      "Participated in climate forums and advanced Climate Tech initiatives",
+      "Transitioned to web3 development with a remote team",
+      "Contributed to tech and blockchain events & won a hackathon"
     ]
   },
   {
     year: 2021,
     comments: [
-      "Visited the Amazon Rainforest for the first time",
-      "Learned about blockchain technology and decided to move towards it"
+      "Visited the Amazon Rainforest for the 1st time",
+      "Delved into rabbit holes of blockchain & web3"
     ]
   },
   {
     year: 2019,
     comments: [
-      "Became a cloud data engineer at Technology Consultancy company",
-      "Got a job offer to work and live in The Netherlands"
+      "Corporate experience within a modern data stack",
+      "moved to the Netherlands for new opportunities",
+      "Became a cloud data engineer"
     ]
   },
   {
     year: 2018,
-    comments: ["Learned a bunch of tech, like python aws, docker, terraform"]
+    comments: ["Developed proficiency in Python, AWS, Docker, and Terraform"]
   },
   {
     year: 2017,
-    comments: [
-      "After some freelance work, I got my first job as a web developer at Intellibrand"
-    ]
+    comments: ["Initiated my tech journey in web development"]
   },
   {
     comments: [

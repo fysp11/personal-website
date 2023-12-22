@@ -10,41 +10,32 @@ interface BioHeaderProps {
 export default function BioHeader({ name, subtitle }: BioHeaderProps) {
   const squareSize = 96
 
-  const boxClasses = cn("flex justify-between gap-[3vw]")
-  const flexGrowClasses = cn("shrink-1")
-  const headingClasses = cn("text-2xl") // Adjust to match your 'page-title' variant
-  const imgContainerClasses = cn(
-    "shrink-0",
-    "mt-4",
-    "md:mt-0",
-    "md:ml-6",
-    "text-center"
-  )
-  const imgBorderClasses = cn(
-    "border",
-    "border-white",
-    "w-24",
-    "h-24",
-    "inline-block",
-    "rounded-full",
-    "overflow-hidden"
-  )
-  const imageClass = cn("rounded-full")
+  const styles = {
+    box: cn("flex justify-between gap-[3vw]"),
+    image: {
+      root: cn("mt-4 shrink-0 md:ml-6 md:mt-0", "text-center"),
+      border: cn(
+        "h-24 w-24 border border-white",
+        "inline-block overflow-hidden rounded-full"
+      )
+    }
+  }
 
   return (
-    <div className={boxClasses}>
-      <div className={flexGrowClasses}>
-        <h2 className={headingClasses}>{name}</h2>
+    <div className={styles.box}>
+      <div className="shrink-1">
+        <h2 className="text-2xl">{name}</h2>
         <p>{subtitle}</p>
       </div>
-      <div className={imgContainerClasses}>
-        <div className={imgBorderClasses}>
+      <div className={styles.image.root}>
+        <div className={styles.image.border}>
           <Image
             src={AVATAR_URL}
             alt="Profile image"
-            className={imageClass}
+            className={"rounded-full"}
             width={squareSize}
             height={squareSize}
+            priority
           />
         </div>
       </div>
