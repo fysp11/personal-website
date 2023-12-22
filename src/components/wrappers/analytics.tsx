@@ -21,13 +21,6 @@ export default function Analytics() {
           gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
         `}
       </Script>
-      <Script
-        type="text/javascript"
-        id="hs-script-loader"
-        src={process.env.NEXT_PUBLIC_HS_URI}
-        async
-        defer
-      />
       <GoogleAnalytics trackPageViews defaultConsent="denied" />
     </>
   )
