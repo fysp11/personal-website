@@ -1,8 +1,13 @@
 {
   "name": "dev-environment",
-  "image": "mcr.microsoft.com/devcontainers/typescript-node:18-bullseye",
   "postCreateCommand": "npx -y npm-check-updates",
   // Features to add to the dev container. More info: https://containers.dev/implementors/features.
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      "VARIANT": "20"
+    }
+  },
   "features": {
     "ghcr.io/devcontainers/features/aws-cli:1": {},
     "ghcr.io/devcontainers/features/docker-in-docker:1": {},
@@ -30,7 +35,9 @@
     }
   },
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
-  "forwardPorts": [3000],
+  "forwardPorts": [
+    3000
+  ],
   "portsAttributes": {
     "3000": {
       "label": "Next.js Web App",

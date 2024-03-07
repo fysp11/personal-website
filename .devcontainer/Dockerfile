@@ -1,8 +1,11 @@
-# See here for image contents: https://github.com/microsoft/vscode-dev-containers/tree/v0.233.0/containers/typescript-node/.devcontainer/base.Dockerfile
+# [Choice] Node.js version (use -bookworm, or -bullseye variants on local arm64/Apple Silicon): 20, 18, 20-bookworm, 18-bookworm, 20-bullseye, 18-bullseye, 20-buster, 18-buster
+ARG VARIANT=20-bookworm
+FROM mcr.microsoft.com/devcontainers/javascript-node:1-${VARIANT}
 
-# [Choice] Node.js version (use -bullseye variants on local arm64/Apple Silicon): 18, 16, 14, 18-bullseye, 16-bullseye, 14-bullseye, 18-buster, 16-buster, 14-buster
-ARG VARIANT="18-bullseye"
-FROM mcr.microsoft.com/vscode/devcontainers/typescript-node:0-${VARIANT}
+# Install tslint, typescript. eslint is installed by javascript image
+ARG NODE_MODULES="tslint-to-eslint-config typescript"
+RUN su node -c "umask 0002 && npm install -g ${NODE_MODULES}" \
+    && npm cache clean --force > /dev/null 2>&1
 
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
@@ -14,5 +17,3 @@ FROM mcr.microsoft.com/vscode/devcontainers/typescript-node:0-${VARIANT}
 
 # [Optional] Uncomment if you want to install more global node packages
 # RUN su node -c "npm install -g <your-package-list -here>"
-
-RUN yarn install

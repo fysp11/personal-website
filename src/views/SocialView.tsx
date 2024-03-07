@@ -1,10 +1,10 @@
 import Link from "next/link"
-import type { SocialItem } from "@/constants/types"
 
+import type { ISocialItem } from "@/lib/types"
 import { cn } from "@/lib/utils"
 
 interface SocialViewProps {
-  socials: SocialItem[]
+  socials: ISocialItem[]
 }
 export default function SocialView({ socials }: SocialViewProps) {
   const styles = {

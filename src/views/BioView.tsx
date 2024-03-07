@@ -1,16 +1,15 @@
-import { PersonalProps } from "@/constants/types"
-
+import { IPersonalInfo } from "@/lib/types"
 import BioContent from "@/components/bio/Content"
 import BioHeader from "@/components/bio/Header"
 
 interface BioProps {
-  personal: PersonalProps
+  personal: IPersonalInfo
 }
-export default function Bio({ personal }: BioProps) {
+export default function BioView({ personal }: BioProps) {
   return (
-    <div className="flex flex-col gap-5">
+    <section className="flex flex-col gap-5">
       <BioHeader {...personal} />
       <BioContent contents={personal.bio} />
-    </div>
+    </section>
   )
 }

@@ -11,9 +11,9 @@ export default function BioHeader({ name, subtitle }: BioHeaderProps) {
   const squareSize = 96
 
   const styles = {
-    box: cn("flex justify-between gap-[3vw]"),
+    box: "flex justify-between gap-[3vw]",
     image: {
-      root: cn("mt-4 shrink-0 md:ml-6 md:mt-0", "text-center"),
+      root: "mt-4 shrink-0 md:ml-6 md:mt-0 text-center",
       border: cn(
         "size-24 border border-white",
         "inline-block overflow-hidden rounded-full"
@@ -22,7 +22,7 @@ export default function BioHeader({ name, subtitle }: BioHeaderProps) {
   }
 
   return (
-    <div className={styles.box}>
+    <section className={styles.box}>
       <div className="shrink-1">
         <h2 className="text-2xl">{name}</h2>
         <p>{subtitle}</p>
@@ -32,13 +32,13 @@ export default function BioHeader({ name, subtitle }: BioHeaderProps) {
           <Image
             src={AVATAR_URL}
             alt="Profile image"
-            className={"rounded-full"}
+            className="rounded-full"
             width={squareSize}
             height={squareSize}
             priority
           />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
