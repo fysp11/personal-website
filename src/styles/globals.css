@@ -11,5 +11,15 @@
       /* Adjust the number based on your items count */
       flex-grow: 1;
     }
+    :root {
+      /* Your default theme */
+      --background: white;
+      --foreground: black;
+    }
+
+    [data-theme="dark"] {
+      --background: black;
+      --foreground: white;
+    }
   }
 }

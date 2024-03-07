@@ -8,9 +8,11 @@ export default function ThemeToggleButton() {
   const isDark = theme == "dark"
 
   const toggleTheme = () => {
+    console.log({ isDark })
     if (isDark) {
       setTheme("light")
     } else {
+      console.log("setting dark")
       setTheme("dark")
     }
   }

@@ -15,7 +15,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
     container: cn("px-[14px]", "w-full sm:max-w-xl md:max-w-2xl")
   }
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
         <Providers>
           <NavBar />

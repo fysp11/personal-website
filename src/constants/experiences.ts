@@ -2,9 +2,16 @@ import { Experience } from "@/constants/types"
 
 export const EXPERIENCES_DATA: Experience[] = [
   {
+    year: 2024,
+    comments: [
+      "Participating into innovation events",
+      "Visitting Brazil for vacation, health, and family"
+    ]
+  },
+  {
     year: 2023,
     comments: [
-      "Tinkering with AI & Extended Reality",
+      "Tinkering with AI, XR, and Blockchain",
       "Participated in innovation conferences & future of work"
     ]
   },
