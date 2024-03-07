@@ -1,6 +1,6 @@
-import { Experience } from "@/constants/types"
+import { IExperience } from "@/lib/types"
 
-export const EXPERIENCES_DATA: Experience[] = [
+export const EXPERIENCES_DATA: IExperience[] = [
   {
     year: 2024,
     comments: [

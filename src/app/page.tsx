@@ -1,27 +1,20 @@
-import { Metadata } from "next"
+import { FYSP_DEV_METADATA } from "@/constants/metadata"
 import { getExperiences, getProfile } from "@/server/data"
-import Bio from "@/views/Bio"
-import Experiences from "@/views/Experiences"
-import SocialView from "@/views/Socials"
+import BioView from "@/views/BioView"
+import ExperiencesView from "@/views/ExperiencesView"
+import SocialView from "@/views/SocialView"
 
-export const metadata: Metadata = {
-  title: "Fysp.Dev",
-  description:
-    "Tech savy and creative Software Engineer. \
-  Tell me some interesting things :)",
-  authors: [{ name: "fysp11", url: "https://github.com/fysp11" }],
-  category: "Living CV"
-}
+export const metadata = FYSP_DEV_METADATA
 
 export default async function Page() {
   const { socials, personal } = await getProfile()
   const experiences = await getExperiences()
 
   return (
-    <div className="flex flex-col gap-7">
-      <Bio personal={personal}></Bio>
-      <Experiences experiences={experiences}></Experiences>
+    <article className="flex flex-col gap-7">
+      <BioView personal={personal}></BioView>
+      <ExperiencesView experiences={experiences}></ExperiencesView>
       <SocialView socials={socials} />
-    </div>
+    </article>
   )
 }

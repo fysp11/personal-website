@@ -1,13 +1,13 @@
 import type { PropsWithChildren } from "react"
 
-import { cn } from "@/lib/utils"
-
-export default function BioSection({ children }: PropsWithChildren) {
-  const className = cn("pl-14", "mx-auto", "mt-2", "mb-2")
-  const style = { textIndent: "-3.4em" }
-
+export default function Section({ children }: PropsWithChildren) {
   return (
-    <div className={className} style={style}>
+    <div
+      className="mx-auto my-2 pl-14"
+      style={{
+        textIndent: "-3.4em"
+      }}
+    >
       {children}
     </div>
   )

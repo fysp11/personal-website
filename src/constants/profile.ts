@@ -1,4 +1,3 @@
-import { ProfileProps } from "@/constants/types"
 import { BiDonateHeart } from "react-icons/bi"
 import {
   FaCalendarPlus,
@@ -8,7 +7,9 @@ import {
 } from "react-icons/fa"
 import { IoLogoGithub, IoLogoTwitter } from "react-icons/io5"
 
-export const ME_PROFILE: ProfileProps = {
+import { IProfile } from "@/lib/types"
+
+export const ME_PROFILE: IProfile = {
   personal: {
     name: "Felipe Mendonça",
     subtitle: "climate/social focused, tech enthusiast, constant questioning",

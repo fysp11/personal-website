@@ -1,12 +1,11 @@
-import { Experience } from "@/constants/types"
-
+import { IExperience } from "@/lib/types"
 import { cn, getSorter } from "@/lib/utils"
 import SectionTitle from "@/components/ui/SectionTitle"
 
 interface ExperiencesProps {
-  experiences: Experience[]
+  experiences: IExperience[]
 }
-export default function Experiences({ experiences }: ExperiencesProps) {
+export default function ExperiencesView({ experiences }: ExperiencesProps) {
   experiences.sort(getSorter("year"))
 
   const styles = {
