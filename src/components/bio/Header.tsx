@@ -15,7 +15,7 @@ export default function BioHeader({ name, subtitle }: BioHeaderProps) {
     image: {
       root: cn("mt-4 shrink-0 md:ml-6 md:mt-0", "text-center"),
       border: cn(
-        "h-24 w-24 border border-white",
+        "size-24 border border-white",
         "inline-block overflow-hidden rounded-full"
       )
     }
