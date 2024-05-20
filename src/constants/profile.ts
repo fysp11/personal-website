@@ -38,9 +38,9 @@ shooting hoops, exploring new technologies and hanging out with friends."
       icon: IoLogoTwitter
     },
     {
-      label: "schedule",
-      url: "https://schedule.fysp.dev",
-      icon: FaDollarSign
+      label: "support",
+      url: "https://apoia.se/cozinhasolidaria",
+      icon: BiDonateHeart
     },
     {
       label: "contact",
@@ -51,11 +51,6 @@ shooting hoops, exploring new technologies and hanging out with friends."
       label: "email",
       url: "mailto:contact@fysp.dev",
       icon: FaEnvelope
-    },
-    {
-      label: "support",
-      url: "https://apoia.se/cozinhasolidaria",
-      icon: BiDonateHeart
     }
   ]
 }
