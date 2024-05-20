@@ -1,10 +1,5 @@
 import { BiDonateHeart } from "react-icons/bi"
-import {
-  FaCalendarPlus,
-  FaDollarSign,
-  FaEnvelope,
-  FaEthereum
-} from "react-icons/fa"
+import { FaCalendarPlus, FaEnvelope, FaEthereum } from "react-icons/fa"
 import { IoLogoGithub, IoLogoTwitter } from "react-icons/io5"
 
 import { IProfile } from "@/lib/types"
@@ -18,8 +13,7 @@ export const ME_PROFILE: IProfile = {
 Code wizard and former psychologist, passionate about using cool tech & strange ideas to imagine a better world. \
 With a broad range of interests from ancestry, AI and the fungi universe, you might find me hiking, \
 shooting hoops, exploring new technologies and hanging out with friends."
-    ],
-    tags: ["web3", "climate", "tech", "future", "love", "brazil"]
+    ]
   },
   socials: [
     {

@@ -9,7 +9,6 @@ export interface IPersonalInfo {
   name: string
   subtitle: string
   bio: string[]
-  tags: string[]
 }
 
 export interface ISocialItem {
