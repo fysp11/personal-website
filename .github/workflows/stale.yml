@@ -2,7 +2,7 @@ name: Mark stale issues and pull requests
 
 on:
   schedule:
-    - cron: "0 0 1 * *" # Runs at 00:00 UTC on the first day of every month
+    - cron: "0 0 * 1,4,7,12 *" # Runs at 00:00, only in January, April, July, and December
 
 jobs:
   stale:
