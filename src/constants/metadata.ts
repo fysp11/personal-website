@@ -8,7 +8,7 @@ export const FYSP_DEV_METADATA: Metadata = {
   keywords: ["web3", "climate", "tech", "ai", "future", "love", "brazil"],
   metadataBase: new URL("https://fysp.dev"),
   alternates: {
-    canonical: "https://fysp.eth.limo"
+    canonical: "https://fysp.dev"
   },
   robots: "index, follow",
   creator: "Felipe Mendonça",
@@ -26,7 +26,7 @@ export const FYSP_DEV_METADATA: Metadata = {
     emails: ["fysp@fysp.dev"]
   },
   icons: [
-    { rel: "icon", url: "/favicon.png" },
+    { rel: "icon", url: "/icons/favicon.ico" },
     {
       url: "/icons/icon-72x72.png",
       sizes: "72x72",
@@ -80,7 +80,7 @@ export const FYSP_DEV_METADATA: Metadata = {
     card: "summary",
     images: [
       {
-        url: "https://fysp.eth.limo/og-image.png",
+        url: "https://fysp.eth.limo/images/fysp_aigen1.jpg",
         alt: "fysp.dev"
       }
     ]
