@@ -1,0 +1,90 @@
+/* Base styling */
+#cc-main {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.show--consent #cc-main .cm-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+.show--consent #cc-main .cc--anim .cm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.cm__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cm__texts {
+  margin-bottom: 10px;
+}
+
+.cm__title {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.cm__desc {
+  font-size: 0.875rem;
+  margin: 5px 0 0;
+}
+
+.cm__btns {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.cm__btn-group {
+  display: flex;
+  gap: 10px;
+}
+
+.cm__btn {
+  padding: 5px 10px;
+  font-size: 0.875rem;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cm__btn--secondary {
+  background-color: #6c757d;
+}
+
+.cm__btn:hover {
+  background-color: #0056b3;
+}
+
+.cm__btn--secondary:hover {
+  background-color: #5a6268;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .cm--bar {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .cm__texts {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+}
