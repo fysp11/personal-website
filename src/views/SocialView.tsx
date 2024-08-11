@@ -19,14 +19,6 @@ export default function SocialView({ socials }: SocialViewProps) {
     icon: "mr-2 min-w-[10px]",
     label: "w-full text-center"
   }
-  const buttonClass = cn(
-    "flex items-center justify-start",
-    "hover:underline",
-    "text-teal-800 dark:text-teal-200",
-    "hover:bg-sky-200 hover:dark:bg-sky-800",
-    "rounded px-2 py-1",
-    "text-2xl"
-  )
 
   return (
     <div className={styles.root}>
