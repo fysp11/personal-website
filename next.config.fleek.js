@@ -4,6 +4,7 @@ const nextConfig = {
   reactStrictMode: true,
   output: "export",
   distDir: "dist",
+  basePath: process.env.APPLICATION_BASE_PATH,
   images: {
     unoptimized: true
   }
