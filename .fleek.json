@@ -1,9 +1,0 @@
-{
-  "build": {
-    "image": "node:20-alpine",
-    "command": "npm install -g pnpm && pnpm install && npm run fleek:prepare && npm run build",
-    "publicDir": "dist",
-    "baseDir": "./",
-    "environment": {}
-  }
-}
