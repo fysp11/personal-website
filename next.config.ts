@@ -1,4 +1,7 @@
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
+import type { NextConfig } from "next"
+import bundleAnalyzer from "@next/bundle-analyzer"
+
+const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === "true"
 })
 
@@ -46,9 +49,7 @@ const securityHeaders = [
   }
 ]
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  swcMinify: true,
+const nextConfig: NextConfig = {
   reactStrictMode: true,
   output: "standalone",
   async headers() {

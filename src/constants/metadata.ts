@@ -80,7 +80,7 @@ export const FYSP_DEV_METADATA: Metadata = {
     card: "summary",
     images: [
       {
-        url: "https://fysp.eth.limo/images/fysp_aigen1.jpg",
+        url: "https://fysp.dev/images/fysp_aigen1.jpg",
         alt: "fysp.dev"
       }
     ]
