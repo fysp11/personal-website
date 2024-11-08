@@ -17,6 +17,9 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup pnpm
         uses: ./.github/actions/pnpm-setup
+        with:
+          node-version: 20
+          pnpm-version: 9
 
       - name: Run Type Check
         run: pnpm run type-check
