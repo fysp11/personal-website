@@ -23,3 +23,4 @@ services:
     command: start-single-node --insecure
     volumes:
       - ./.data:/cockroach/cockroach-data
+    read_only: true
