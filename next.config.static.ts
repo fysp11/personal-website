@@ -21,7 +21,7 @@ module.exports = {
   reactStrictMode: true,
   output: "export",
   distDir: "dist",
-  basePath: basePath,
+  basePath: basePath !== "/" ? basePath : undefined,
   assetPrefix: basePath, // Ensure static assets use the same prefix
   images: {
     unoptimized: true
