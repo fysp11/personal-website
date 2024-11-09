@@ -35,7 +35,7 @@ jobs:
         uses: ./.github/actions/pnpm-setup
         with:
           node-version: "20"
-          pnpm-version: "8"
+          pnpm-version: "9"
           install-dependencies: "false"
       - name: Setup Pages
         uses: actions/configure-pages@v5

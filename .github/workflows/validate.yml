@@ -20,7 +20,7 @@ jobs:
         uses: ./.github/actions/pnpm-setup
         with:
           node-version: "20"
-          pnpm-version: "9"
+          pnpm-version: "9.12.3"
 
       - name: Run Lint
         run: pnpm run lint
