@@ -59,7 +59,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Build with Next.js
-        run: pnpm fleek:prepare && pnpm build
+        run: pnpm static:prepare && pnpm build
         env:
           NEXT_PUBLIC_GA_MEASUREMENT_ID: ${{ secrets.NEXT_PUBLIC_GA_MEASUREMENT_ID }}
           APPLICATION_BASE_PATH: /${{ vars.GH_PAGES_BASE_PATH }}

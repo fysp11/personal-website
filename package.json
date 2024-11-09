@@ -15,7 +15,7 @@
     "start": "next start",
     "lint": "next lint",
     "type-check": "tsc --noEmit",
-    "fleek:prepare": "cp ./next.config.static.ts ./next.config.ts"
+    "static:prepare": "cp ./next.config.static.ts ./next.config.ts && cat ./next.config.ts"
   },
   "dependencies": {
     "@next/third-parties": "15.0.3",
