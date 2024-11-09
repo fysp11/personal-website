@@ -13,7 +13,7 @@ jobs:
   amplify-security-scan:
     name: Amplify Security Scan
     runs-on: ubuntu-latest
-    if: ${{ contains(github.actor, '[bot]') }}
+    if: ${{ !contains(github.actor, '[bot]') }}
     env:
       GITHUB_ACTOR: ${{ github.actor }}
     steps:
