@@ -24,3 +24,5 @@ services:
     volumes:
       - ./.data:/cockroach/cockroach-data
     read_only: true
+    security_opt:
+      - no-new-privileges:true
