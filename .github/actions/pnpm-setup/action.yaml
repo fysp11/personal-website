@@ -10,6 +10,10 @@ inputs:
     description: "Node.js version to install"
     required: false
     default: "20"
+  install-dependencies:
+    description: "Whether to install dependencies"
+    required: false
+    default: "true"
 
 runs:
   using: "composite"
@@ -20,10 +24,10 @@ runs:
         node-version: ${{ inputs.node-version }}
 
     - name: Install pnpm
-      uses: pnpm/action-setup@v3
+      uses: pnpm/action-setup@v4
       with:
         version: ${{ inputs.pnpm-version }}
-        run_install: true
+        run_install: ${{ inputs.install-dependencies }}
 
     - name: Get pnpm store directory
       id: pnpm-cache

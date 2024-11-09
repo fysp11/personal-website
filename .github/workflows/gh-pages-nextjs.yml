@@ -33,6 +33,10 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup pnpm
         uses: ./.github/actions/pnpm-setup
+        with:
+          node-version: "20"
+          pnpm-version: "9"
+          install-dependencies: "false"
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
@@ -41,7 +45,7 @@ jobs:
           #
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: next
-          generator_config_file: next.config.fleek.js
+          generator_config_file: next.config.static.js
       - name: Restore cache
         uses: actions/cache@v4
         with:
