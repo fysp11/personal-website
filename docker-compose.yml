@@ -23,3 +23,5 @@ services:
     command: start-single-node --insecure
     volumes:
       - ./.data:/cockroach/cockroach-data
+    security_opt:
+      - no-new-privileges:true
